@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>Edge @ Mindshare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: url('portal/fish.gif');
+            background-size: cover;
+            background-color: white;
+        }
+        
+        .fish {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            padding-top: 80px;
+            padding-left: 20px;
+            border: 6px solid rgb(161, 32, 171);
+            overflow: hidden;
+        }
+        
+        .fish img {
+            display: block;
+        }
+        
+        .fish .welcome {
+            width: 80%;
+        }
+        
+        .entry {
+            background: rgb(161, 32, 171);
+            position: absolute;
+            bottom: 10px;
+            height: 60px;
+            left: 10px;
+            display: block;
+            right: 10px;
+            transform: translateY(100px);
+            transform-origin: 50% 50%;
+            transition: all ease 1.5s;
+            color: white;
+        }
+        
+        .entry img {
+            display: block;
+            height: 24px;
+            margin: auto;
+            margin-top: 17px;
+            line-height: 60px;
+        }
+        
+        .entry.visible {
+            transform: translateY(0px);
+        }
+        
+        .poweredBy {
+            display: block;
+            position: absolute;
+            right: 15px;
+            height: 10px;
+            bottom: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="load" src="" style="position: absolute; z-index:-8888; visibility: hidden;" />
+    <div class='fish'>
+        <img class='welcome' src="portal/WELCOME.png" />
+        <a href="http://cn.bing.com" class="entry" id='entry'>
+            <img src="portal/Enter.png" />
+        </a>
+        <img class="poweredBy" src="portal/emerge.png" />
+    </div>
+
+    <script>
+            window.onload = function() {
+                document.getElementById("entry").classList.add("visible");
+                document.getElementById("load").src = "http://wifi.lan:2561/cgi-bin/login.cgi";
+            };
+        </script>
+</body>
+</html>
