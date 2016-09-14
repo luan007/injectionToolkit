@@ -1,219 +1,272 @@
 <inject appendTo="head">
 	<style>
-	#touchArea{
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		overflow: hidden;
-		margin: auto;
-		transition: all 1s ease;
-	}
-	.scaled{
-		transform: scale(.5);
-		animation: mymove 1.5s infinite;
-		-moz-animation: mymove 1.5s infinite; /* Firefox */
-		-webkit-animation: mymove 1.5s infinite; /* Safari and Chrome */
-		-o-animation: mymove 1.5s infinite; /* Opera */
-	}
+		@font-face {
+			font-family: 'digital';
+			src: url('{{root}}/assets/DS-Digital.ttf.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		
+		@font-face {
+			font-family: 'cam';
+			src: url('{{root}}/assets/digicam.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		
+		#stationaryLayer {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: url('{{root}}/assets/universe.jpg');
+			background-size: cover;
+			background-position: 50% 50%;
+			-webkit-filter: blur(5px);
+			transform: rotate(0deg) scale(1.2);
+			z-index: -100;
+			transition: all 0.3s ease;
+		}
+		
+		#shutter {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			transition: opacity 1s ease;
+			background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%);
+			/* FF3.6-15 */
+			background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%);
+			/* Chrome10-25,Safari5.1-6 */
+			background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%);
+			/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			z-index: 999;
+			pointer-events: none;
+		}
+		
+		#sudden {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			transition: opacity 0.2s ease;
+			background: black;
+			z-index: 1000;
+			pointer-events: none;
+		}
 
-	@keyframes mymove
-	{
-		0% {
-			-webkit-filter: blur(0px); /* Chrome, Opera */
-	        -moz-filter: blur(0px);
-	        -ms-filter: blur(0px);
-	        filter: blur(0px);
+		.transition2 #sudden {
+			opacity: 1;
 		}
-		20% {
-			-webkit-filter: blur(6px); /* Chrome, Opera */
-	        -moz-filter: blur(6px);
-	        -ms-filter: blur(6px);
-	        filter: blur(6px);
+		
+		.transition3 #sudden {
+			opacity: 0;
+			transition: opacity 0.1s ease;
 		}
-		40% {
-			-webkit-filter: blur(3px); /* Chrome, Opera */
-	        -moz-filter: blur(3px);
-	        -ms-filter: blur(3px);
-	        filter: blur(3px);
+		
+		#lens {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: url("{{root}}/assets/lens.jpg");
+			background-size: cover;
+			z-index: 9;
+			mix-blend-mode: overlay;
+			opacity: 0;
+			transform: scale(1) rotate(0);
+			transition: all 2s ease;
 		}
-		60% {
-			-webkit-filter: blur(9px); /* Chrome, Opera */
-	        -moz-filter: blur(9px);
-	        -ms-filter: blur(9px);
-	        filter: blur(9px);
+		
+		#webContent {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			overflow: hidden;
+			margin: auto;
+			transition: all 0.7s ease;
+			border-radius: 0px;
+			transform: rotate(0) scale(1);
+			border: 0px solid rgba(255, 255, 255, 0.1);
 		}
-		80% {
-			-webkit-filter: blur(3px); /* Chrome, Opera */
-	        -moz-filter: blur(3px);
-	        -ms-filter: blur(3px);
-	        filter: blur(3px);
+		
+		#touchArea {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			transition: all 0.8s 0.5s ease;
+			z-index: 1;
 		}
-		100% {
-			-webkit-filter: blur(0px); /* Chrome, Opera */
-	        -moz-filter: blur(0px);
-	        -ms-filter: blur(0px);
-	        filter: blur(0px);
+		
+		#viewfinder {
+			visibility: hidden;
+			opacity: 0;
+			transition: all 0.5s ease;
 		}
-	}
-
-	@-moz-keyframes mymove /* Firefox */
-	{
-		0% {
-			-webkit-filter: blur(0px); /* Chrome, Opera */
-	        -moz-filter: blur(0px);
-	        -ms-filter: blur(0px);
-	        filter: blur(0px);
+		
+		.focoRect {
+			position: fixed;
+			height: 60px;
+			width: 60px;
+			transform: translate(-30px, -30px);
+			top: 0;
+			left: 0;
+			border: 3px solid red;
 		}
-		20% {
-			-webkit-filter: blur(6px); /* Chrome, Opera */
-	        -moz-filter: blur(6px);
-	        -ms-filter: blur(6px);
-	        filter: blur(6px);
+		
+		.focoPlane {
+			display: block;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			height: 120px;
+			width: 120px;
+			border-radius: 9999em;
+			background: rgba(0, 0, 0, 0.1);
+			border: 1px solid black;
+			opacity: 0;
+			transform: translate(-60px, -60px) scale(2);
+			mix-blend-mode: multiply;
+			transition: all 1s ease;
 		}
-		40% {
-			-webkit-filter: blur(3px); /* Chrome, Opera */
-	        -moz-filter: blur(3px);
-	        -ms-filter: blur(3px);
-	        filter: blur(3px);
+		
+		.focoPlane > span {
+			display: block;
+			width: 80px;
+			height: 80px;
+			border-radius: 99999em;
+			border: 20px solid rgba(0, 0, 0, 0.5);
+			background: repeating-linear-gradient( -45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 4px);
 		}
-		60% {
-			-webkit-filter: blur(9px); /* Chrome, Opera */
-	        -moz-filter: blur(9px);
-	        -ms-filter: blur(9px);
-	        filter: blur(9px);
+		
+		#viewfinder .iconArea {
+			color: #ffffff;
+			position: fixed;
+			bottom: -100px;
+			width: 100%;
+			text-align: center;
+			font-family: digital;
+			transform: scale(4);
+			font-size: 10px;
+			z-index: 100;
 		}
-		80% {
-			-webkit-filter: blur(3px); /* Chrome, Opera */
-	        -moz-filter: blur(3px);
-	        -ms-filter: blur(3px);
-	        filter: blur(3px);
+		
+		#viewfinder .iconArea > span {
+			font-family: cam;
 		}
-		100% {
-			-webkit-filter: blur(0px); /* Chrome, Opera */
-	        -moz-filter: blur(0px);
-	        -ms-filter: blur(0px);
-	        filter: blur(0px);
+		
+		.transition1 #lens {
+			opacity: 0.3;
+			transform: scale(3) rotate(10deg);
 		}
-	}
-
-	@-webkit-keyframes mymove /* Safari and Chrome */
-	{
-		0% {
-			-webkit-filter: blur(0px); /* Chrome, Opera */
-	        -moz-filter: blur(0px);
-	        -ms-filter: blur(0px);
-	        filter: blur(0px);
+		
+		.transition1 #webContent {
+			animation: defocus 1.5s 2s infinite;
+			transform: scale(.8);
+			border-radius: 30px;
+			border: 3px solid rgba(255, 255, 255, 0.1);
 		}
-		20% {
-			-webkit-filter: blur(6px); /* Chrome, Opera */
-	        -moz-filter: blur(6px);
-	        -ms-filter: blur(6px);
-	        filter: blur(6px);
+		
+		.transition1 #viewfinder {
+			visibility: visible;
+			opacity: 1;
+			transition: all 2s ease;
 		}
-		40% {
-			-webkit-filter: blur(3px); /* Chrome, Opera */
-	        -moz-filter: blur(3px);
-	        -ms-filter: blur(3px);
-	        filter: blur(3px);
+		
+		.transition1 #viewfinder .focoRect {
+			animation: defocus .5s infinite;
 		}
-		60% {
-			-webkit-filter: blur(9px); /* Chrome, Opera */
-	        -moz-filter: blur(9px);
-	        -ms-filter: blur(9px);
-	        filter: blur(9px);
+		
+		.transition1 .focoPlane {
+			opacity: 0.5;
+			transform: translate(-60px, -60px) scale(2.5);
 		}
-		80% {
-			-webkit-filter: blur(3px); /* Chrome, Opera */
-	        -moz-filter: blur(3px);
-	        -ms-filter: blur(3px);
-	        filter: blur(3px);
+		
+		.transition1 #touchArea {
+			transform: scale(.6);
 		}
-		100% {
-			-webkit-filter: blur(0px); /* Chrome, Opera */
-	        -moz-filter: blur(0px);
-	        -ms-filter: blur(0px);
-	        filter: blur(0px);
+		
+		@keyframes defocus {
+			0% {
+				-webkit-filter: blur(0px);
+				/* Chrome, Opera */
+				-moz-filter: blur(0px);
+				-ms-filter: blur(0px);
+				filter: blur(0px);
+			}
+			20% {
+				-webkit-filter: blur(6px);
+				/* Chrome, Opera */
+				-moz-filter: blur(6px);
+				-ms-filter: blur(6px);
+				filter: blur(6px);
+			}
+			40% {
+				-webkit-filter: blur(3px);
+				/* Chrome, Opera */
+				-moz-filter: blur(3px);
+				-ms-filter: blur(3px);
+				filter: blur(3px);
+			}
+			60% {
+				-webkit-filter: blur(9px);
+				/* Chrome, Opera */
+				-moz-filter: blur(9px);
+				-ms-filter: blur(9px);
+				filter: blur(9px);
+			}
+			80% {
+				-webkit-filter: blur(3px);
+				/* Chrome, Opera */
+				-moz-filter: blur(3px);
+				-ms-filter: blur(3px);
+				filter: blur(3px);
+			}
+			100% {
+				-webkit-filter: blur(0px);
+				/* Chrome, Opera */
+				-moz-filter: blur(0px);
+				-ms-filter: blur(0px);
+				filter: blur(0px);
+			}
 		}
-	}
-
-	@-o-keyframes mymove /* Opera */
-	{
-		0% {
-			-webkit-filter: blur(0px); /* Chrome, Opera */
-	        -moz-filter: blur(0px);
-	        -ms-filter: blur(0px);
-	        filter: blur(0px);
-		}
-		20% {
-			-webkit-filter: blur(6px); /* Chrome, Opera */
-	        -moz-filter: blur(6px);
-	        -ms-filter: blur(6px);
-	        filter: blur(6px);
-		}
-		40% {
-			-webkit-filter: blur(3px); /* Chrome, Opera */
-	        -moz-filter: blur(3px);
-	        -ms-filter: blur(3px);
-	        filter: blur(3px);
-		}
-		60% {
-			-webkit-filter: blur(9px); /* Chrome, Opera */
-	        -moz-filter: blur(9px);
-	        -ms-filter: blur(9px);
-	        filter: blur(9px);
-		}
-		80% {
-			-webkit-filter: blur(3px); /* Chrome, Opera */
-	        -moz-filter: blur(3px);
-	        -ms-filter: blur(3px);
-	        filter: blur(3px);
-		}
-		100% {
-			-webkit-filter: blur(0px); /* Chrome, Opera */
-	        -moz-filter: blur(0px);
-	        -ms-filter: blur(0px);
-	        filter: blur(0px);
-		}
-	}
-	.duijiao{
-		position: fixed;
-		height: 25%;
-		width: 50%;
-		border: 3px solid gray;
-		transform: scale(.5);
-		display: none;
-	}
-	.d1{
-		top: 0;
-		left: 0;
-		border-right: 0;
-		border-bottom: 0;
-	}
-	.d2{
-		right: 0;
-		bottom: 0;
-		border-top: 0;
-		border-left: 0;
-	}
-	.d3{
-		top: 0;
-		right: 0;
-		border-bottom: 0;
-		border-left: 0;
-	}
-	.d4{
-		left: 0;
-		bottom: 0;
-		border-top: 0;
-		border-right: 0;
-	}
 	</style>
 </inject>
 <inject appendTo="body">
-	<span class="duijiao d1"></span>
-	<span class="duijiao d2"></span>
-	<span class="duijiao d3"></span>
-	<span class="duijiao d4"></span>
+	<div id="stationaryLayer">
+
+	</div>
+	<div id="viewfinder">
+		<div id="lens">
+
+		</div>
+		<span class="focoRect"></span>
+		<span class="focoPlane">
+			<span></span>
+		</span>
+		<span class="iconArea">
+			<span>7</span>
+		<i id="apa">F2.8</i>
+		<span>W</span>
+		<span>H</span>
+		<i id="iso">2000</i>
+		</span>
+	</div>
+	<div id="shutter">
+
+	</div>
+	<div id="sudden">
+
+	</div>
 </inject>
