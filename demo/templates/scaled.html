@@ -1,0 +1,219 @@
+<inject appendTo="head">
+	<style>
+	#touchArea{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		margin: auto;
+		transition: all 1s ease;
+	}
+	.scaled{
+		transform: scale(.5);
+		animation: mymove 1.5s infinite;
+		-moz-animation: mymove 1.5s infinite; /* Firefox */
+		-webkit-animation: mymove 1.5s infinite; /* Safari and Chrome */
+		-o-animation: mymove 1.5s infinite; /* Opera */
+	}
+
+	@keyframes mymove
+	{
+		0% {
+			-webkit-filter: blur(0px); /* Chrome, Opera */
+	        -moz-filter: blur(0px);
+	        -ms-filter: blur(0px);
+	        filter: blur(0px);
+		}
+		20% {
+			-webkit-filter: blur(6px); /* Chrome, Opera */
+	        -moz-filter: blur(6px);
+	        -ms-filter: blur(6px);
+	        filter: blur(6px);
+		}
+		40% {
+			-webkit-filter: blur(3px); /* Chrome, Opera */
+	        -moz-filter: blur(3px);
+	        -ms-filter: blur(3px);
+	        filter: blur(3px);
+		}
+		60% {
+			-webkit-filter: blur(9px); /* Chrome, Opera */
+	        -moz-filter: blur(9px);
+	        -ms-filter: blur(9px);
+	        filter: blur(9px);
+		}
+		80% {
+			-webkit-filter: blur(3px); /* Chrome, Opera */
+	        -moz-filter: blur(3px);
+	        -ms-filter: blur(3px);
+	        filter: blur(3px);
+		}
+		100% {
+			-webkit-filter: blur(0px); /* Chrome, Opera */
+	        -moz-filter: blur(0px);
+	        -ms-filter: blur(0px);
+	        filter: blur(0px);
+		}
+	}
+
+	@-moz-keyframes mymove /* Firefox */
+	{
+		0% {
+			-webkit-filter: blur(0px); /* Chrome, Opera */
+	        -moz-filter: blur(0px);
+	        -ms-filter: blur(0px);
+	        filter: blur(0px);
+		}
+		20% {
+			-webkit-filter: blur(6px); /* Chrome, Opera */
+	        -moz-filter: blur(6px);
+	        -ms-filter: blur(6px);
+	        filter: blur(6px);
+		}
+		40% {
+			-webkit-filter: blur(3px); /* Chrome, Opera */
+	        -moz-filter: blur(3px);
+	        -ms-filter: blur(3px);
+	        filter: blur(3px);
+		}
+		60% {
+			-webkit-filter: blur(9px); /* Chrome, Opera */
+	        -moz-filter: blur(9px);
+	        -ms-filter: blur(9px);
+	        filter: blur(9px);
+		}
+		80% {
+			-webkit-filter: blur(3px); /* Chrome, Opera */
+	        -moz-filter: blur(3px);
+	        -ms-filter: blur(3px);
+	        filter: blur(3px);
+		}
+		100% {
+			-webkit-filter: blur(0px); /* Chrome, Opera */
+	        -moz-filter: blur(0px);
+	        -ms-filter: blur(0px);
+	        filter: blur(0px);
+		}
+	}
+
+	@-webkit-keyframes mymove /* Safari and Chrome */
+	{
+		0% {
+			-webkit-filter: blur(0px); /* Chrome, Opera */
+	        -moz-filter: blur(0px);
+	        -ms-filter: blur(0px);
+	        filter: blur(0px);
+		}
+		20% {
+			-webkit-filter: blur(6px); /* Chrome, Opera */
+	        -moz-filter: blur(6px);
+	        -ms-filter: blur(6px);
+	        filter: blur(6px);
+		}
+		40% {
+			-webkit-filter: blur(3px); /* Chrome, Opera */
+	        -moz-filter: blur(3px);
+	        -ms-filter: blur(3px);
+	        filter: blur(3px);
+		}
+		60% {
+			-webkit-filter: blur(9px); /* Chrome, Opera */
+	        -moz-filter: blur(9px);
+	        -ms-filter: blur(9px);
+	        filter: blur(9px);
+		}
+		80% {
+			-webkit-filter: blur(3px); /* Chrome, Opera */
+	        -moz-filter: blur(3px);
+	        -ms-filter: blur(3px);
+	        filter: blur(3px);
+		}
+		100% {
+			-webkit-filter: blur(0px); /* Chrome, Opera */
+	        -moz-filter: blur(0px);
+	        -ms-filter: blur(0px);
+	        filter: blur(0px);
+		}
+	}
+
+	@-o-keyframes mymove /* Opera */
+	{
+		0% {
+			-webkit-filter: blur(0px); /* Chrome, Opera */
+	        -moz-filter: blur(0px);
+	        -ms-filter: blur(0px);
+	        filter: blur(0px);
+		}
+		20% {
+			-webkit-filter: blur(6px); /* Chrome, Opera */
+	        -moz-filter: blur(6px);
+	        -ms-filter: blur(6px);
+	        filter: blur(6px);
+		}
+		40% {
+			-webkit-filter: blur(3px); /* Chrome, Opera */
+	        -moz-filter: blur(3px);
+	        -ms-filter: blur(3px);
+	        filter: blur(3px);
+		}
+		60% {
+			-webkit-filter: blur(9px); /* Chrome, Opera */
+	        -moz-filter: blur(9px);
+	        -ms-filter: blur(9px);
+	        filter: blur(9px);
+		}
+		80% {
+			-webkit-filter: blur(3px); /* Chrome, Opera */
+	        -moz-filter: blur(3px);
+	        -ms-filter: blur(3px);
+	        filter: blur(3px);
+		}
+		100% {
+			-webkit-filter: blur(0px); /* Chrome, Opera */
+	        -moz-filter: blur(0px);
+	        -ms-filter: blur(0px);
+	        filter: blur(0px);
+		}
+	}
+	.duijiao{
+		position: fixed;
+		height: 25%;
+		width: 50%;
+		border: 3px solid gray;
+		transform: scale(.5);
+		display: none;
+	}
+	.d1{
+		top: 0;
+		left: 0;
+		border-right: 0;
+		border-bottom: 0;
+	}
+	.d2{
+		right: 0;
+		bottom: 0;
+		border-top: 0;
+		border-left: 0;
+	}
+	.d3{
+		top: 0;
+		right: 0;
+		border-bottom: 0;
+		border-left: 0;
+	}
+	.d4{
+		left: 0;
+		bottom: 0;
+		border-top: 0;
+		border-right: 0;
+	}
+	</style>
+</inject>
+<inject appendTo="body">
+	<span class="duijiao d1"></span>
+	<span class="duijiao d2"></span>
+	<span class="duijiao d3"></span>
+	<span class="duijiao d4"></span>
+</inject>
