@@ -1,7 +1,5 @@
 window.$$$wrap$$$ = function () {
-
     var curState = 0;
-
     setInterval(function () {
         if (Math.random() > 0.8) {
             $$$(".focoRect").css("left", parseInt(Math.random() * 100) + "%")
@@ -20,7 +18,6 @@ window.$$$wrap$$$ = function () {
         } else {
             $$$(".iconArea").css("opacity", 0.9).css("color", "#fff");;
         }
-
 
         if (Math.random() > 0.6) {
             $$$("#lens").css("opacity", 0.8);
@@ -81,7 +78,10 @@ window.$$$wrap$$$ = function () {
                     stage(2);
                     setTimeout(function() {
                         stage(3);
-                    }, 1000);
+                        setTimeout(function() {
+                            stage(4);
+                        }, 1500);
+                    }, 200);
                 } else {
                     stage(0);
                 }
