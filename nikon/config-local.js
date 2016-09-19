@@ -7,5 +7,5 @@ window.$Edge = {
         [edgeroot + '/utils/common.js'],
     ],
     // init: [edgeroot + '/mindshare/bing.js']
-    init: [edgeroot + '/demo/scale.js']
+    init: [edgeroot + '/nikon/scale.js']
 };
