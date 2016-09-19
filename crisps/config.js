@@ -1,11 +1,13 @@
 var edgeroot = 'http://192.168.123.175:9999';
 window.edgeroot = edgeroot;
-window.projroot = edgeroot + "/demo";
+window.projroot = edgeroot + "/crisps";
 
 window.$Edge = {
     deps: [
         [edgeroot + '/utils/common.js'],
+        [projroot + '/box2d.js'],
+        [projroot + '/drow-canvas.js'],
     ],
     // init: [edgeroot + '/mindshare/bing.js']
-    init: [edgeroot + '/demo/scale.js']
+    init: [projroot + '/init.js']
 };
