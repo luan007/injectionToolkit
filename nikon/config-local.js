@@ -1,6 +1,6 @@
-var edgeroot = 'http://192.168.123.175:9999';
+var edgeroot = 'http://localhost:9999';
 window.edgeroot = edgeroot;
-window.projroot = edgeroot + "/demo";
+window.projroot = edgeroot + "/nikon";
 
 window.$Edge = {
     deps: [

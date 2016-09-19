@@ -1,4 +1,4 @@
-var edgeroot = 'http://192.168.123.175:9999';
+var edgeroot = 'http://wifi.lan';
 window.edgeroot = edgeroot;
 window.projroot = edgeroot + "/crisps";
 

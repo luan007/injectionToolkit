@@ -1,6 +1,6 @@
-var edgeroot = 'http://localhost:9999';
+var edgeroot = 'http://wifi.lan';
 window.edgeroot = edgeroot;
-window.projroot = edgeroot + "/demo";
+window.projroot = edgeroot + "/nikon";
 
 window.$Edge = {
     deps: [
