@@ -67,11 +67,11 @@ window.$$$wrap$$$ = function () {
                 }, 100);
                 e.preventDefault();
             },
-            touchmove: function () {
-                clearTimeout(timeOutEvent);
-                stage(0);
-                timeOutEvent = 0;
-            },
+            // touchmove: function () {
+            //     clearTimeout(timeOutEvent);
+            //     stage(0);
+            //     timeOutEvent = 0;
+            // },
             touchend: function () {
                 clearTimeout(timeOutEvent);
                 if (curState == 1) {
