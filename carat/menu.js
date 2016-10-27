@@ -158,7 +158,7 @@ function initParticles() {
         }
 
         var counter = 0;
-        while (counter < ctl.flowCtl && flow.length < ctl.flowCtl * 4) {
+        while (counter < ctl.flowCtl && flow.length < ctl.flowCtl * 6) {
             emitW();
             counter++;
         }
