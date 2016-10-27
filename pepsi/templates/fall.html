@@ -1,0 +1,128 @@
+<inject appendTo="head">
+    <style>
+        #main-canvas {
+            pointer-events: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #frozen {
+            pointer-events: none;
+            position: fixed;
+            z-index: 9998;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            background: url({{root}}/assets/frozen.png);
+            background-size: cover;
+            background-position: 50% 50%;
+            transition: opacity 2s ease;
+        }
+        
+        #frozen.freeze {
+            opacity: 0.8;
+            transition: opacity 0.5s ease;
+        }
+        
+        body {
+            height: auto;
+            margin: 0;
+        }
+        
+        .ocean {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10000;
+            opacity: 1;
+            pointer-events:none;
+        }
+
+        #bang {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 99998;
+            opacity: 1;
+            pointer-events:none;
+        }
+        
+        .overlay {
+            opacity: 1;
+            mix-blend-mode: hard-light;
+        }
+
+        .imgKV {
+            transition: all 1s ease;
+            background: url('{{root}}/assets/pepsikv.png');
+            background-size: contain;
+            transform: scale(0);
+            opacity: 0;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            position: fixed;
+            z-index: 99999;
+            left:0; right:0; bottom: 0; top:0;
+        }
+
+        .glow {
+            transition: all 0.3s 1s ease;
+            background: url('{{root}}/assets/glow.png');
+            background-size: cover;
+            pointer-events:none;
+            opacity: 0;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            position: fixed;
+            z-index: 99997;
+            left:0; right:0; bottom: 0; top:0;
+        }
+        .glow.show {
+            opacity: 1;
+        }
+        .imgKV.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+    </style>
+</inject>
+<inject appendTo="body">
+    <canvas id="main-canvas"></canvas>
+    <div id="frozen"></div>
+    <div style="visibility: hidden; position: fixed; z-index: -999">
+        <img id="img1" src="{{root}}/assets/e1.png" />
+        <img id="img2" src="{{root}}/assets/e2.png" />
+        <img id="img3" src="{{root}}/assets/e3.png" />
+        <img id="img4" src="{{root}}/assets/e4.png" />
+        <img id="img5" src="{{root}}/assets/e5.png" />
+        <img id="img6" src="{{root}}/assets/e6.png" />
+        <img id="img7" src="{{root}}/assets/e7.png" />
+        <img id="img8" src="{{root}}/assets/e8.png" />
+        <img id="img9" src="{{root}}/assets/e9.png" />
+        <img id="img10" src="{{root}}/assets/e10.png" />
+        <img id="img11" src="{{root}}/assets/e11.png" />
+        <img id="img12" src="{{root}}/assets/e12.png" />
+        <img id="imgCan" src="{{root}}/assets/can.png" />
+        <img id="imgEar" src="{{root}}/assets/ear.png" />
+    </div>
+    <canvas class='ocean'></canvas>
+    <canvas class='ocean'></canvas>
+    <div class="glow"></div>
+    <canvas id='bang'></canvas>
+    <div class="imgKV" onclick="document.getElementById('myvid').play()"></div>
+    <video src="{{root}}/assets/video.mp4" id='myvid'></video>
+</inject>

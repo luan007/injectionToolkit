@@ -153,6 +153,7 @@ window.$$$wrap$$$ = function () {
         });
     }
     
+
     window.$$$template = function(id, data) {
         data = data || {};
         if(!window.$$$template$$$ || !window.$$$template$$$[id]) return;
