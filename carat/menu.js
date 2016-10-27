@@ -119,8 +119,8 @@ function initParticles() {
             ay: 0,
             vx: Math.random() * 500 + 550,
             vy: (Math.random() - 0.5) * 130,
-            s: Math.random() * ctl.flowCtl * 0.03 + ctl.flowCtl / 100,
-            ro: Math.random() * Math.PI * 30 + 3,
+            s: Math.random() * ctl.flowCtl * 0.02 + ctl.flowCtl / 100,
+            ro: Math.random() * Math.PI * 13 + 3,
             vr: (Math.random() - 0.5) * 10,
             o: Math.random(),
             vo: Math.random() / 100 + 0.01,
@@ -158,7 +158,7 @@ function initParticles() {
         }
 
         var counter = 0;
-        while (counter < ctl.flowCtl && flow.length < ctl.flowCtl * 5) {
+        while (counter < ctl.flowCtl && flow.length < ctl.flowCtl * 4) {
             emitW();
             counter++;
         }
