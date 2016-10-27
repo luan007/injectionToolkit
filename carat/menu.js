@@ -119,8 +119,8 @@ function initParticles() {
             ay: 0,
             vx: Math.random() * 500 + 550,
             vy: (Math.random() - 0.5) * 130,
-            s: Math.random() * ctl.flowCtl * 0.02 + ctl.flowCtl / 100,
-            ro: Math.random() * Math.PI * 13 + 3,
+            s: Math.random() * ctl.flowCtl * 0.03 + ctl.flowCtl / 100,
+            ro: Math.random() * Math.PI * 30 + 3,
             vr: (Math.random() - 0.5) * 10,
             o: Math.random(),
             vo: Math.random() / 100 + 0.01,
@@ -158,7 +158,7 @@ function initParticles() {
         }
 
         var counter = 0;
-        while (counter < ctl.flowCtl && flow.length < ctl.flowCtl * 6) {
+        while (counter < ctl.flowCtl && flow.length < ctl.flowCtl * 8) {
             emitW();
             counter++;
         }
@@ -177,7 +177,7 @@ function initParticles() {
             ctx.translate(c.x, c.y);
             ctx.fillStyle = "rgba(255,255,255," + Math.min(1, c.o * ctl.flowCtl * 0.01) + ")";
             ctx.rotate(c.ro);
-            ctx.scale(c.s * c.s * c.s * 70, c.s * c.s * c.s * 70);
+            ctx.scale(c.s * c.s * c.s * 90, c.s * c.s * c.s * 90);
             ctx.beginPath();
             ctx.moveTo(0, -1.732);
             ctx.lineTo(-1, 0);
