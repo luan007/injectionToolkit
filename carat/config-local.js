@@ -4,7 +4,8 @@ window.projroot = edgeroot + "/carat";
 
 window.$Edge = {
     deps: [
+        [edgeroot + '/utils/ease.js'],
         [edgeroot + '/utils/common.js'],
     ],
-    init: [edgeroot + '/carat/menu.js', edgeroot + '/carat/main.js']
+    init: [edgeroot + '/carat/menu.js']
 };

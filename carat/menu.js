@@ -19,8 +19,8 @@ function buildMenu(query, padding, showMenu) {
             // top: e.changedTouches[0].clientY - half,
             // left: e.changedTouches[0].clientX - half,
             "transform": "translateX(" + posX + "px) translateY(" + posY + "px) scale(1.2)",
-            "box-shadow": "rgba(0, 0, 0, 0.4) 0px 7px 15px 2px",
-            "transition": "none"
+            "background": "#fff",
+            "transition": "background 0.1s ease"
         });
         e.preventDefault();
         return true;
@@ -57,7 +57,7 @@ function buildMenu(query, padding, showMenu) {
         d.css({
             "transform": "translateX(" + targetX + "px) translateY(" + targetY + "px) scale(1)",
             "transition": "all ease 0.5s",
-            "box-shadow": "rgba(0, 0, 0, .3) 0px 0px 3px 0px"
+            "background": "rgba(255, 255, 255, 0.9)",
         });
     };
 
@@ -67,7 +67,131 @@ function buildMenu(query, padding, showMenu) {
 }
 
 window.$$$wrap$$$ = function () {
-    edge.deploy(projroot, "/templates/menu.html", function() {
-        buildMenu("#edge_menu_bar", 4);
+    edge.deploy(projroot, "/templates/menu.html", function () {
+
+        function showMenu() {
+            $("#edge-menu-content").addClass("visible");
+            ease(ctl, "flowCtl", 40, 0.05);
+        }
+
+        function closeMenu() {
+            $("#edge-menu-content").removeClass("visible");
+            ease(ctl, "flowCtl", 0, 0.01);
+        }
+
+        buildMenu("#edge_menu_bar", 4, showMenu);
+        $("#edge-menu-close").click(closeMenu);
+
+        initParticles();
     });
 };
+
+
+var ctl = {
+    flowCtl: 0
+};
+function initParticles() {
+    var canvas = document.getElementById("edge-particle-bg");
+    var ctx = canvas.getContext("2d");
+
+    window.addEventListener("resize", resize);
+    var global_width, global_height, ratio;
+
+    function resize() {
+        ratio = window.devicePixelRatio || 1;
+        global_width = window.innerWidth;
+        global_height = window.innerHeight;
+        console.log(ratio);
+        canvas.setAttribute("width", global_width * ratio);
+        canvas.setAttribute("height", global_height * ratio);
+        canvas.style.width = global_width;
+        canvas.style.height = global_height;
+        // draw();
+    }
+
+    window.flow = [];
+
+    function emitW() {
+        flow.push({
+            x: -100,
+            y: global_height * Math.random(),
+            ax: -10,
+            ay: 0,
+            vx: Math.random() * 500 + 550,
+            vy: (Math.random() - 0.5) * 130,
+            s: Math.random() * ctl.flowCtl * 0.03 + ctl.flowCtl / 100,
+            ro: Math.random() * Math.PI * 30 + 3,
+            vr: (Math.random() - 0.5) * 10,
+            o: Math.random(),
+            vo: Math.random() / 100 + 0.01,
+            type: Math.random(),
+            entered: false
+        });
+        flow[flow.length - 1].x -= flow[flow.length - 1].s * 70;
+    }
+
+    function inView(o) {
+        return o.x > -100 && o.y > -100 && o.x < global_width + 100 && o.y < global_height + 100;
+    }
+
+    function update(t) {
+        ease_update();
+        var len = flow.length;
+        for (var i = 0; i < len; i++) {
+            var cur = flow.pop();
+
+            if (inView(cur)) {
+                cur.entered = true;
+            } else if (cur.entered) {
+                //kick
+                continue;
+            }
+
+            cur.vx += cur.ax * t;
+            cur.vy += cur.ay * t;
+            cur.x += cur.vx * t;
+            cur.y += cur.vy * t;
+            cur.o += cur.vo * t;
+            cur.o = Math.min(1, cur.o);
+            cur.ro += cur.vr * t;
+            flow.unshift(cur);
+        }
+
+        var counter = 0;
+        while (counter < ctl.flowCtl && flow.length < ctl.flowCtl * 10) {
+            emitW();
+            counter++;
+        }
+    }
+
+    var prev = Date.now();
+    function draw() {
+        update((Date.now() - prev) / 1000);
+        prev = Date.now();
+        ctx.save();
+        ctx.scale(ratio, ratio);
+        ctx.clearRect(0, 0, global_width, global_height);
+        for (var i = 0; i < flow.length; i++) {
+            var c = flow[i];
+            ctx.save();
+            ctx.translate(c.x, c.y);
+            ctx.fillStyle = "rgba(255,255,255," + Math.min(1, c.o * ctl.flowCtl * 0.01) + ")";
+            ctx.rotate(c.ro);
+            ctx.scale(c.s * c.s * c.s * 70, c.s * c.s * c.s * 70);
+            ctx.beginPath();
+            ctx.moveTo(0, -1.732);
+            ctx.lineTo(-1, 0);
+            ctx.lineTo(1, 0);
+            ctx.fill();
+            ctx.closePath();
+            // ctx.fillRect(-c.s / 2, -c.s / 2, c.s, c.s);
+            ctx.restore();
+        }
+
+        ctx.restore();
+        return requestAnimationFrame(draw);
+    }
+
+    resize();
+    requestAnimationFrame(draw);
+}

@@ -1,6 +1,11 @@
 <inject appendTo="body">
 
 	<style>
+		@font-face {
+			font-family: 'carat-bold';
+			src: url('{{root}}/assets/bold.woff');
+		}
+		
 		#edge_menu_bar {
 			height: 70px;
 			width: 70px;
@@ -9,11 +14,11 @@
 			z-index: 1000000;
 			left: 0;
 			top: 0;
-			background: rgba(255,255,255,1);
+			background: rgba(255, 255, 255, 0);
 			transition: 0.5s all ease;
-            transform-origin: 50% 50%;
-            transform: translate(0, 0) scale(1, 1);
-            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+			transform-origin: 50% 50%;
+			transform: translate(0, 0) scale(1, 1);
+			background: rgba(255, 255, 255, 0.9);
 		}
 		
 		#edge_menu_bar svg {
@@ -21,20 +26,20 @@
 		}
 		
 		.menu-text {
-			transform-origin: 51.5% 75%; 
-            opacity: 1;
+			transform-origin: 51.5% 75%;
+			opacity: 1;
 			transform: rotate(0) scale(1, 1);
 			transition: 0.5s all ease;
 		}
-
-        #edge_menu_bar.hold {
+		
+		#edge_menu_bar.hold {
 			background: rgba(0, 0, 0, 0);
-        }
-
-        #edge_menu_bar.hold .menu-text {
+		}
+		
+		#edge_menu_bar.hold .menu-text {
 			transform: rotate(-20deg) scale(0, 0);
-            opacity: 0;
-        }
+			opacity: 0;
+		}
 	</style>
 	<div id='edge_menu_bar'>
 
@@ -106,4 +111,124 @@
 
 	</div>
 
+
+	<style>
+		#edge-particle-bg {
+			position: fixed;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			z-index: 9999998;
+			pointer-events: none;
+		}
+	</style>
+	<canvas id="edge-particle-bg"></canvas>
+
+	<style>
+		#edge-menu-content {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			font-family: carat-bold;
+			z-index: 9999999;
+			pointer-events: none;
+			opacity: 0;
+			transition: opacity 0.5s ease, filter 1.3s ease, -webkit-filter 1.3s ease;
+			
+			-webkit-filter: blur(50px);
+			filter: blur(50px);
+		}
+
+		#edge-menu-content.visible {
+			pointer-events: all;
+			opacity: 1;
+			-webkit-filter: blur(0px);
+			filter: blur(0px);
+			transition: opacity 0.5s 1.5s ease, filter 1.3s 2s ease, -webkit-filter 1.3s 2s ease;
+			
+		}
+		
+		#edge-menu-content > div:first-of-type {
+			position: fixed;
+			left: 10%;
+			top: 50%;
+			margin: 0;
+			transform: translateY(-50%);
+			z-index: 9999999;
+		}
+		
+		#edge-menu-content h1 {
+			color: #00acf6;
+			font-size: 50px;
+			margin-bottom: 5px;
+		}
+
+		#edge-menu-content h2 {
+			color: #464646;
+			font-size: 30px;
+		}
+
+		#edge-menu-bar {
+			background: #00acf6;
+			height: 5px;
+			width: 100px;
+
+			margin-top: 30px;
+			margin-bottom: 70px;
+		}
+
+		#edge-menu-content a {
+			font-size: 19px;
+			text-decoration: none;
+			color: #0096d8;
+
+		}
+
+		.edgecross {
+			position: absolute; 
+			top: 30px;
+			right: 30px;
+			width: 40px;
+			height: 40px;
+			overflow: visible;
+		}
+
+		.edgecross:before, .edgecross:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			height: 2px;
+			width: 40px;
+			right: 0px;
+			bottom: 20px;
+			background: #003951;
+			transform-origin: 50% 50%;
+			transform: rotate(0deg);
+			opacity: 0;
+			transition: all 0.2s ease;
+		}
+		
+		.visible .edgecross:before {
+			transform: rotate(45deg);
+			opacity: 1;
+		}
+		.visible .edgecross:after {
+			transform: rotate(-45deg);
+			opacity: 1;
+		}
+
+
+	</style>
+	<div id="edge-menu-content" class="">
+		<div>
+			<h1>CARAT</h1>
+			<h2>REDEFINING<br>MEDIA.</h2>
+			<div id="edge-menu-bar"></div>
+			<a href="#">SEEK FOR MORE</a>
+		</div>
+		<div id="edge-menu-close" class="edgecross"></div>
+	</div>
 </inject>
