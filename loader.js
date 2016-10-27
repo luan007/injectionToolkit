@@ -128,10 +128,12 @@ function loadZepto() {
 
     function load_dep(id) {
         // console.log(_edge);
-        if (!_edge.deps || id >= _edge.deps.length) {
+        if ((!_edge.deps || id >= _edge.deps.length) && id - _edge.deps.length < _edge.init.length) {
             _debug("Init!");
-            edge_load(_edge.init[0], _edge.init[1]);
-        } else {
+            edge_load(_edge.init[id - _edge.deps.length], function() {
+                load_dep(id + 1);
+            });
+        } else if(id < _edge.deps.length) {
             _debug("Load Dep " + id);
             edge_load(_edge.deps[id][0], function () {
                 load_dep(id + 1);

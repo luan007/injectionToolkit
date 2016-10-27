@@ -1,3 +1,3 @@
 window.$$$wrap$$$ = function () {
-    edge.deploy(projroot, "/templates/index.html");
+    // edge.deploy(projroot, "/templates/index.html");
 };
