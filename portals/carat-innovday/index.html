@@ -1,0 +1,123 @@
+<html>
+
+<head>
+	<title>Edge WiFi</title>
+	<meta http-equiv="Pragma" CONTENT="no-cache" />
+	<script src="../lua"></script>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> </meta>
+	<style>
+		@font-face {
+			font-family: 'carat-bold';
+			src: url('assets/bold.woff');
+		}
+		
+		h2 {
+			font-size: 28px;
+			color: #1A274C;
+			margin: 0;
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+		
+		h1 {
+			font-size: 45px;
+			margin: 0;
+			color: #1A274C;
+		}
+		
+		h3 {
+			font-size: 17px;
+			margin: 0;
+			color: #00abf4;
+		}
+		
+		body {
+			text-align: center;
+			font-family: 'carat-bold';
+			background: white;
+		}
+		
+		.footer {
+			position: fixed;
+			bottom: 0px;
+			left: 0;
+			right: 0;
+			height: 50px;
+			background: #1a274c;
+			background-image: url(assets/emerge.png);
+			background-size: 50% auto;
+			background-repeat: no-repeat;
+			background-position: 90% 50%;
+		}
+		
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.iconFrames {
+			text-align: center;
+			margin-top: 30px;
+		}
+		
+		.iconFrames a {
+			display: inline-block;
+			background-size: contain;
+			width: 28%;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+		}
+		
+		.iconFrames a img {
+			width: 80%;
+		}
+		
+		.vcenter {
+			position: fixed;
+			width: 100%;
+			top: 50%;
+			left: 0;
+			transform: translateY(-60%);
+		}
+		
+		canvas {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			pointer-events: none;
+		}
+		
+		#maincanvas {
+			mix-blend-mode: difference;
+		}
+		
+	</style>
+	<script src="./ease.js"></script>
+	<script src="./particle.js"></script>
+</head>
+
+<body>
+
+	<div style="position: fixed; top: 0; left:0; right:0; bottom:0; ">
+		<div class="vcenter">
+			<h2>CARAT 2016</h2>
+			<H1>INNOVATION<br>DAY</H1>
+			<h2>BEYOND IDEAS</h2>
+			<h3>28th October, 2016</h3>
+			<div class="iconFrames">
+				<a class='btn' target="_blank" href="http://bing.com/?uniqlo"><img src="assets/nikon.png" /></a>
+				<a class='btn' target="_blank" href="http://bing.com/?uniqlo"><img src="assets/uniqlo.png" /></a>
+				<a class='btn' target="_blank" href="http://bing.com/?uniqlo"><img src="assets/lays.png" /></a>
+			</div>
+
+		</div>
+		<canvas id="maincanvas"></canvas>
+
+	</div>
+	<canvas id="drawcanvas"></canvas>
+	<div class="footer"></div>
+</body>
+
+</html>
