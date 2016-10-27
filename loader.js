@@ -10,6 +10,8 @@
         return flag;
     }
 
+    window.IsPC = IsPC;
+
     if(IsPC()) return;
 
     var edge = {};
