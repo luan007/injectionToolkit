@@ -1,0 +1,216 @@
+<inject appendTo="#main">
+    <style>
+        .schholder {
+            background: #f6f6f6;
+        }
+        
+        .schholder .clicker > span {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+            border-radius: 99999em;
+            background: rgba(255, 255, 255, 0);
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: bolder;
+            text-align: center;
+            color: #333;
+            letter-spacing: -1px;
+            font-family: Arial;
+            margin-right: 0px;
+            transition: 0.2s cubic-bezier(.3, .49, .51, 1.53) all;
+        }
+        
+        .schholder .clicker > span::before {
+            position: absolute;
+            content: " ";
+            height: 40px;
+            width: 40px;
+            left: 0px;
+            top: -0px;
+            background: #FE6010;
+            transform: scale(0);
+            display: block;
+            z-index: 0;
+            border-radius: 9999em;
+            transition: 0.5s ease-out all;
+            opacity: 0;
+        }
+        
+        .schholder .clicker > span.selected {
+            /*background: #FE6010;*/
+            color: #fff;
+        }
+        
+        .schholder .clicker > span.selected::before {
+            transform: scale(1);
+            opacity: 1;
+            transition: 0.5s cubic-bezier(.3, .49, .51, 1.53) all;
+        }
+        
+        .schholder img {
+            display: block;
+            width: 100%;
+        }
+        
+        .edge-date {
+            text-align: right;
+            font-size: 1.0em;
+            color: #aaa;
+            font-weight: lighter;
+            font-family: Arial;
+            height: 40px;
+            line-height: 40px;
+            float: right;
+            margin: 10px;
+        }
+        
+        .schholder-list {
+            width: 100%;
+        }
+        
+        .schholder-list > div:nth-child(1n+10) {
+            display: none;
+        }
+        .schholder-list.showall > div:nth-child(1n+10) {
+            display: block;
+        }
+    </style>
+</inject>
+
+<inject prependTo="#main">
+
+    <div class="mnr-c edgesp" id="schedule_all" style="display:none; background:#f6f6f6">
+        <h1 id="bannerBG"><img src="{{root}}/assets/logo-t.png"></img>Agenda</h1>
+        <div class="schholder">
+            <div class="clicker" style="float:left">
+                <span class='edge-date-chooser'><b style="z-index:100; position:relative;">30</b></span>
+                <span class='edge-date-chooser'><b style="z-index:100; position:relative;">31</b></span>
+                <span class='edge-date-chooser'><b style="z-index:100; position:relative;">1</b></span>
+                <span class='edge-date-chooser'><b style="z-index:100; position:relative;">2</b></span>
+            </div>
+            <div class="edge-date">May 17, 2016</div>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            <div id="edge-sch-30" class="schholder-list">
+            </div>
+            
+            <div id="edge-sch-31" class="schholder-list">
+            </div>
+            
+            <div id="edge-sch-1" class="schholder-list">
+            </div>
+            
+            <div id="edge-sch-2" class="schholder-list">
+            </div>
+            
+            <!--<img class="edge-date-sch-img" style="display:none; border-top: 1px solid #ddd;" src="{{root}}/assets/program-0518.png" />-->
+            <!--<img class="edge-date-sch-img" style="display:none; border-top: 1px solid #ddd;" src="{{root}}/assets/program-0517.png" />-->
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            
+            var  $ = $$$;
+            var present = [];
+            
+            if(googleutil.regexKW(/(schedule|time|agenda)/i)) {
+                present = $$$edgeData$$$.timeslots;
+            } else {
+                var kw = googleutil.getKW().toLowerCase();
+                for(var i = 0; i < $$$edgeData$$$.timeslots.length; i++) {
+                    var cur = $$$edgeData$$$.timeslots[i];
+                    if(cur.title && cur.title.toLowerCase().indexOf(kw) >= 0
+                    || cur.location.name && cur.location.name.toLowerCase().indexOf(kw) >= 0) {
+                        present.push($$$edgeData$$$.timeslots[i]);
+                    }
+                }
+            }
+            
+            if(present.length == 0) {
+                return;
+            }
+            $("#schedule_all").css("display", "block");
+            
+        var today = new Date().getDate();
+        var map = [30, 31, 1, 2];
+        var month = [5, 5, 6, 6];
+        var monthTxt = {
+            5: "May",
+            6: "June"
+        }
+        
+        today = map.indexOf(today);
+        today = today < 0 ? 0 : today;
+        
+        var date = map[today];
+        
+        
+        for(var i in present) {
+            var cur = present[i];
+            var d = parseInt(cur.start_time.split(" ")[0].substring(5).split("-")[1]);
+             $$$template("timeslot", {
+                                    title: cur.title,
+                                    time: cur.start_time.split(" ")[1].substring(0, 5) + " - " + cur.end_time.split(" ")[1].substring(0, 5), 
+                                    location: cur.location.name,
+                                    date: cur.start_time.split(" ")[0].substring(5)
+                                }).appendTo($("#edge-sch-" + d));
+            
+        }
+        
+        $(".schholder-list").css("display", "none");
+        $(".schholder-list").each(function(){
+            var _t = $(this);
+            if(_t.children().length > 10) {
+                var o = $("<div style='display:block' class='more-btn'>" + "More (" + (_t.children().length - 11) + ")" + "</div>");
+                o.appendTo(_t);
+                o.click(function() {
+                    if(_t.hasClass("showall")) {
+                        o.html("More (" + (_t.children().length - 11) + ")");
+                    } else {
+                        o.html("Close");
+                    }
+                    _t.toggleClass("showall");
+                });
+            }
+        });
+        
+        
+        var choosers = document.getElementsByClassName("edge-date-chooser");
+        // var imgs = document.getElementsByClassName("edge-date-sch-img");
+        for(var i = 0; i < choosers.length; i++){
+            (function(i){
+                choosers[i].onclick = choosers[i].ontouchend = function(ev) {
+                    choose(i);
+                };
+            })(i);
+        }
+        function choose(i) {
+            var choosen = monthTxt[month[i]] + " " + map[i];
+            var index = i;
+            // $(".schholder-list").css("display", "block");
+             for(var i = 0; i < choosers.length; i++){
+                (function(i){
+                    if(i == index) {
+                        $($(".schholder-list")[i]).css("display", "block");
+                        $$$(choosers[i]).addClass("selected");
+                        // imgs[i].style.display = "block";
+                    } else {
+                        $$$(choosers[i]).removeClass("selected");
+                        $($(".schholder-list")[i]).css("display", "none");
+                        // imgs[i].style.display = "none";
+                    }
+                })(i);
+            }
+             $$$(".edge-date").html(choosen);
+        }
+        choose(today);
+        })();
+    </script>
+</inject>

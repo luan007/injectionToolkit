@@ -1,0 +1,89 @@
+<wait>#userinfo-wrap</wait>
+<remove>#userinfo-wrap,#weather,#skin,#logo,#plus-card,#admin</remove>
+
+<insert prependTo="body">
+    <style>
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 70, 10, 0.1);
+            -webkit-filter: blur(1px);
+            opacity: 0.5;
+        }
+        
+        .ao {
+            font-family: "Open Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, sans-serif;
+        }
+        
+        #page {
+            background: none;
+            color: white;
+        }
+        
+        body {
+            background-color: black;
+            /*background-image: url('{{root}}/assets/sua-ny.jpg');*/
+            background-size: cover;
+        }
+        
+        #edge-spanner h1 {
+            font-size: 5.2em;
+            font-weight: 900;
+        }
+        
+        #lologo {
+            display: block;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        #edge-spanner {
+            margin-top: 100px;
+            margin-bottom: 70px;
+        }
+        
+        #index-bn {
+            background: #0a9e01;
+            border-color: #0a9e01;
+        }
+        
+        #pattern {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('{{root}}/assets/bg.jpg');
+            background-size: cover;
+            opacity: 0.7;
+        }
+    </style>
+</insert>
+
+<inject prependTo='#page'>
+    <div id="pattern">
+
+    </div>
+    <div id="particles">
+    </div>
+</inject>
+<insert insertBefore="#header">
+    <style>
+        #edge-spanner {
+            height: 150px;
+        }
+    </style>
+    <div id="edge-spanner">
+        <!--<h1 class="ao">SEE THE FUTURE</h1>-->
+        <img id="lologo" src="{{root}}/assets/logow.png" />
+    </div>
+</insert>
+
+
+<remove>#navs</remove>

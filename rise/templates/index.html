@@ -1,0 +1,206 @@
+<inject appendTo='body'>
+    <style>
+        
+        body {
+            font-family: Roboto-Regular,HelveticaNeue,Arial,sans-serif !important;
+        }
+        
+        #gb-main {
+            background: url("{{root}}/assets/wallpaper.png");
+            background-size: cover;
+            background-position: 30% 50%;
+        }
+        
+        #hplogoo {
+            -webkit-filter: brightness(100);
+            filter: brightness(100);
+            display:none;
+        }
+        
+        #rise-logo {
+            display: none;
+        }
+        
+        #rise-logo-txt {
+            margin-left: 10px;
+            color: white;
+            padding-bottom: 70px;
+        }
+        
+        
+        #rise-logo-txt h3 {
+            margin: 0;
+            font-weight: lighter;
+            font-size: 1.8em;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        #rise-logo-txt p {
+            margin: 0;
+        }
+        
+        #innovLogo2 {
+            /*display:block;*/
+            display: none;
+            margin-left: 10px;
+            margin-right: auto;
+            width: 50%;
+        }
+        
+        #_eEe,
+        #fbar {
+            display: none !important;
+        }
+        
+        #gb#gb a.gb_b {
+            -webkit-filter: invert(1);
+            filter: invert(1);
+        }
+        
+        @media screen and (orientation:portrait) {
+            #rise-logo {
+                position: relative;
+                display: block;
+            }
+            #rise-logo img {
+                display: block;
+                width: 50%;
+                margin-left: 10px;
+                margin-right: auto;
+                margin-top: 20%;
+                margin-bottom: 20px;
+                position: relative;
+            }
+        }
+        
+        @media screen and (orientation:landscape) {
+            #rise-logo {
+                /*position: absolute;*/
+                display: block;
+                margin-top: 35px;
+                left: 0;
+                right: 0;
+            }
+            
+            #rise-logo-txt h3 {
+                visibility: hidden;
+                font-size: 0em;
+            }
+            
+            #rise-logo-txt{
+                padding-bottom: 10px;
+            }
+            
+            #rise-logo img {
+                display: block;
+                width: 20%;
+                margin-left: 10px;
+                margin-right: auto;
+            }
+            .msb {
+                margin-top: 0px;
+            }
+            #innovLogo2 {
+                display: block;
+            }
+        }
+        
+        #promo {
+            position: relative;
+        }
+        
+        #promo img{
+            display: inline-block;
+            height: 1em;
+            vertical-align: middle;
+        }
+        
+        #edge-nav {
+            text-align: center;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+        
+        #edge-nav a {
+            display: inline-block;
+            max-width: 20%;
+            margin: 1%;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        #edge-nav a img {
+            display: inline-block;
+            width: 35%;
+            margin-bottom: 3px;
+        }
+        
+        #edge-nav a div {
+            padding-top: 5px;
+            font-family: Roboto-Regular,HelveticaNeue,Arial,sans-serif !important;
+        }
+    </style>
+</inject>
+
+<inject prependTo="#_Q5">
+    <div id="rise-logo">
+        <img src="{{root}}/assets/logo.svg" />
+    </div>
+    <div id="rise-logo-txt">
+        <h3>Welcome, </h3>
+        <p>May 31 -- June 2, 2016</p>
+        <p>Convention and Exhibition Centre, Hong Kong</p>
+    </div>
+</inject>
+
+<inject prependTo="#hplogoo">
+    <img id="innovLogo2" src="{{root}}/assets/logo.svg" />
+</inject>
+
+<remove>#promo *</remove>
+
+
+<inject appendTo="#promo">
+    <a target="_blank" href="http://emerge.cc" style="text-decoration:none; opacity: 0.6; color:#fff; text-align:right; display:block; right: 8px; position:absolute; top:-15px;">Powered by <b>Edge Networks</b> | <img src="{{root}}/assets/emerge(white).svg"/></a>
+    
+    <!--<a target="_blank" href="http://emerge.cc" style="text-decoration:none; opacity: 0.5; color:#fff; text-align:right; display:block; right: 8px; position:absolute; top:-15px;">Powered by <img src="{{root}}/assets/emerge(white).svg"/></a>-->
+</inject>
+
+
+<inject insertAfter="#main">
+    <div id="edge-nav" style="position:relative; z-index:988888;">
+        <a href="/search?nord=1&q=speaker">
+            <img src="{{root}}/assets/icons/speaker.svg"/>  
+            <div>Speakers</div>
+        </a>
+        <a href="/search?nord=1&q=attendee">
+            <img style="transform-origin: 50% 100%; transform:scale(0.8)"  src="{{root}}/assets/icons/more.svg"/>  
+            <div>Attendees</div>
+        </a>
+        <a href="/search?nord=1&q=investor">
+            <img src="{{root}}/assets/icons/partners.svg"/>  
+            <div>Investors</div>
+        </a>
+        <div style="height: 10px"></div>
+        <!--<a href="/search?nord=1&q=tracks">
+            <img style="transform-origin: 50% 100%; transform:scale(0.9)" src="{{root}}/assets/icons/tracks.svg"/>  
+            <div>Tracks</div>
+        </a>-->
+        <a href="/search?nord=1&q=schedule">
+            <img style="transform-origin: 50% 100%; transform:scale(0.85)"  src="{{root}}/assets/icons/Program.svg"/>  
+            <div>Schedule</div>
+        </a>
+        <a href="/search?nord=1&q=download" target="_blank">
+            <img style="transform-origin: 50% 100%; transform:scale(0.9)" src="{{root}}/assets/icons/guide.svg"/>  
+            <div>Guide</div>
+        </a>
+        <a href="/search?nord=1&q=download" target="_blank">
+            <img style="transform-origin: 50% 100%; transform:scale(0.7)" src="{{root}}/assets/icons/downloads.svg"/>  
+            <div>About us</div>
+        </a>
+    </div>
+</inject>

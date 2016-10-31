@@ -1,0 +1,48 @@
+<inject prependTo="#main">
+    <style>
+        .download.edgeuseritem .img-holder {
+            border: none;
+        }
+        
+        .download.edgeuseritem {
+            display: block;
+            text-decoration: none;
+        }
+    </style>
+    <div class="mnr-c edgesp" style="display:none;" id="downloads">
+        <h1 id="bannerBG"><img src="{{root}}/assets/logo-t.png"></img>Downloads</h1>
+        <div id="downloads_container">
+            <a class="download edgeuseritem" href="{{root}}/data/RISE2016_InvestorMap.pdf" target="_blank">
+                <div class="img-holder" style="background-image:url('{{root}}/assets/icons/pdf.png')"></div>
+                <div class="txt-holder">
+                    <p>Guide</p>
+                    <p>Floor map of RISE2016</p>
+                </div>
+            </a>
+            <a class="download edgeuseritem" href="{{root}}/data/Edge Intro.pdf" target="_blank">
+                <div class="img-holder" style="background-image:url('{{root}}/assets/icons/pdf.png')"></div>
+                <div class="txt-holder">
+                    <p>Edge Intro</p>
+                    <p>Introduction to Edge Technology</p>
+                    <p>Technical Details and Scenerios included</p>
+                </div>
+            </a>
+            <!--<a class="download edgeuseritem" href="{{root}}/data/Edge Intro.pdf" target="_blank">
+                <div class="img-holder" style="background-image:url('{{root}}/assets/icons/pdf.png')"></div>
+                <div class="txt-holder">
+                    <p>About Emerge</p>
+                    <p>Introduction to the Team</p>
+                </div>
+            </a>-->
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            var $ = $$$;
+            if(googleutil.regexKW(/(download|edge|emerge|guide|rise|data|pdf|more)/i)) {
+                $("#downloads").css("display", "block");
+            }
+        })();
+    </script>
+</inject>

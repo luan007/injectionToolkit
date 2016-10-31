@@ -1,0 +1,40 @@
+<inject prependTo="#main">
+
+    <div class="mnr-c edgesp" style="display:none" id="investors">
+        <h1 id="bannerBG"><img src="{{root}}/assets/logo-t.png"></img>Investors</h1>
+        <div id="investor_container">
+        </div>
+        <a target="_blank" style="display:none" class="investor-more more-btn">More</a>
+    </div>
+
+    <script>
+        (function(){
+            var $ = $$$;
+            var present = [];
+            if(googleutil.regexKW(/invest/i)) {
+                present = $$$edgeData$$$.investors.people;
+            } else {
+                var kw = googleutil.getKW().toLowerCase();
+                for(var i = 0; i < $$$edgeData$$$.investors.people.length; i++) {
+                    var cur = $$$edgeData$$$.investors.people[i];
+                    if(cur.full_name.toLowerCase().indexOf(kw) >= 0 ||
+                    cur.company_name.toLowerCase().indexOf(kw) >= 0) {
+                        present.push($$$edgeData$$$.investors.people[i]);
+                    }
+                }
+            }
+            if(present.length > 0) {
+                var origin = present.length;
+                present.length = present.length > 5 ? 5 : present.length;
+                if(origin > present.length) {
+                    $(".investor-more").css("display", "block").text("More (" + (origin - present.length) + ")");
+                }
+                var container = $("#investor_container");
+                for(var i = 0; i < present.length; i++) {
+                    $$$template("investor", present[i]).appendTo(container);
+                }
+                $("#investors").css("display", "block");
+            }
+        })();
+    </script>
+</inject>

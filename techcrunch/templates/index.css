@@ -1,0 +1,343 @@
+
+        #logo,
+        #userinfo-wrap,
+        .weather-outline > .icon-down,
+        .weather-status,
+        .baiduappcall-wrap {
+            display: none !important;
+        }
+        #menu-container {
+            visibility: hidden !important;
+        }
+        .weather-outline {
+            direction: rtl;
+            visibility: hidden;
+        }
+        .weather-outline.show {
+            direction: rtl;
+            visibility: visible;
+        }
+
+               #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 70, 10, 0.1);
+            -webkit-filter: blur(1px);
+            opacity: 0.5;
+        }
+        
+        #page {
+            background: none;
+            color: white;
+        }
+        
+        body {
+            background-color: black;
+            /*background-image: url('{{root}}/assets/sua-ny.jpg');*/
+            background-size: cover;
+        }
+        
+        #index-bn {
+            background: #0a9e01;
+            border-color: #0a9e01;
+        }
+        
+        #pattern {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('../assets/bg.jpg');
+            background-size: cover;
+            opacity: 0.7;
+        }
+
+            #edge-spanner {
+            /*height: 150px;*/
+        }
+        
+        #atTop {
+            text-align: left;
+            padding: 5%;
+        }
+        
+        #tclogo {
+            width: 45%;
+        }
+        
+        #edge_date {
+            /*margin-right: 10%;*/
+            color: white;
+            text-align: right;
+            position: absolute;
+            top: 30px;
+            right: 5%;
+            visibility: hidden;
+        }
+        
+        #edge_date div {
+            line-height: 1em;
+            padding: 0;
+            margin: 0;
+            font-family: "Open Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, sans-serif;
+        }
+        
+        #edge_date > div:first-of-type {
+            font-size: 1.4em;
+        }
+        
+        #edge_date > div:nth-child(2) {
+            font-size: 4.2em;
+        }
+        
+        .weather-outline.show {
+            position: relative;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .weather-outline * {
+            color: white !important;
+            opacity: 0.6;
+        }
+        
+        #toui {
+            margin-top: 45px;
+            font-size: 2.3em;
+            font-family: "Open Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, sans-serif;
+        }
+        
+        #edge-sch {
+            text-align: left;
+            /*width: 100%;*/
+            max-height: 120px;
+            overflow-y: scroll;
+        }
+        
+        #edge-sch-container {
+            font-family: "Open Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, sans-serif;
+            position: relative;
+            margin: 5%;
+            overflow: hidden;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            background: rgba(30, 30, 30, 0.5);
+        }
+        
+        #edge-sch::-webkit-scrollbar {
+            height: 0px;
+            width: 0px;
+        }
+        
+        .shadow-bottom.hidden {
+            opacity: 0;
+        }
+        
+        .shadow-bottom {
+            /*background: url("{{root}}/assets/shade.png");*/
+            position: absolute;
+            left: -100px;
+            bottom: 0;
+            top: -100px;
+            pointer-events: none;
+            right: -100px;
+            background-position: 0% 100%;
+            background-repeat: repeat-x;
+            background-size: 1px 30px;
+            opacity: 1;
+            /*height: 30px;*/
+            transition: all ease 0.5s;
+            box-shadow: 0px -10px 30px rgba(0, 0, 0, 1) inset;
+        }
+        
+        #edge-sch .time {
+            vertical-align: middle;
+            padding-right: 10px;
+        }
+        
+        #edge-sch .tag {
+            font-size: 0.8em;
+            opacity: 0.6;
+            border-radius: 2px;
+            padding: 2px 10px;
+            vertical-align: middle;
+            border: 1px solid #fff;
+            float: right;
+        }
+        
+        #edge-sch .chat {
+            font-size: 1.2em;
+        }
+        
+        #edge-sch .misc {
+            font-size: 0.8em;
+        }
+        
+        #edge-sch >div {
+            padding: 10px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        #edge-sch > div:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: -22px;
+            left: 15px;
+            width: 2px;
+            top: 20px;
+            background: white;
+        }
+        
+        #edge-sch > div:last-of-type:before {
+            display: none;
+        }
+        
+        #edge-sch > div:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            left: 12px;
+            width: 8px;
+            height: 8px;
+            border-radius: 1000em;
+            top: 19px;
+            background: white;
+        }
+        
+        #edge-sch >div:nth-child(n) {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        #edge-sch >div:nth-child(1) {
+            border-top: 1px solid transparent;
+        }
+
+             #edge-nav {
+            font-family: "Open Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, sans-serif;
+            list-style: none;
+            text-align: center;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+        }
+        
+        #edge-nav li {
+            display: inline-block;
+            width: 23%;
+            vertical-align: top;
+        }
+        
+        #edge-nav li i {
+            font-size: 22px;
+            line-height: 27px;
+            vertical-align: middle;
+        }
+        
+        #edge-nav li div {
+            display: block;
+            width: 30px;
+            height: 25px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            margin: 10px auto;
+            background-image: url('../assets/tc_sh2016 logo.png');
+        }
+        
+        
+        #edge-nav li a {
+            color: white;
+            text-decoration: none;
+        }
+        #edge-nav li a:active {
+            color: white;
+        }
+
+        #edge-nav li i,
+        #edge-nav li img {
+            display: block;
+            width: 25px;
+            height: 25px;
+            /*border: 1px solid white;*/
+            margin: 10px auto;
+        }
+        
+        .about {
+            text-align: left;
+            margin: 20px 28px;
+            padding: 10px 15px;
+            display: block;
+            border: 2px solid white;
+            text-decoration: none;
+            color: white;
+            font-family: "Open Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, sans-serif;
+        }
+        
+        .about:visited {
+            color: white;
+        }
+
+        .about img {
+            vertical-align: middle;
+        }
+        
+        #header {
+            margin-top: 50px;
+        }
+        
+        #bottom {
+            margin-top: 150px;
+        }
+
+
+.qrcode {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #0a9e01;
+    z-index: 9999;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.qrcode img {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.5);
+}
+
+.qrcode .txt {
+    font-family: "Open Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, sans-serif;
+    font-size: 1.2em;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.closed {
+    display: none;
+}
+
+.qrcode .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-family: "Open Sans", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+}

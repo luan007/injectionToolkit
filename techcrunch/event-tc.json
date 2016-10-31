@@ -1,0 +1,101 @@
+{
+    "baidu": {
+        "welcome": "Techcrunch",
+        "text": "TechCrunch 上海 2016",
+        "link": "search://Techcrunch?csrc=hotwords_hotspot_txt",
+        "word": "欢迎",
+        "adapt": {
+            "m.baidu.com": "http://wifi.lan/techcrunch/config.js",
+            "www.baidu.com": "http://wifi.lan/techcrunch/config.js"
+        }
+    },
+    "weibo": {
+        "template": {
+            "created_at": "Sun Jun 26 09:00:00 +0800 2016",
+            "id": 3968806558684679,
+            "mid": "3968806558684679",
+            "idstr": "3968806558684679",
+            "text": "【看见未来 / SEE THE FUTURE】\n 您已抵达 TechCrunch 创新峰会 - 上海站\n 创新者的盛宴，即刻启航\n 场内智能导览 -> http://m.baidu.com/",
+            "source_allowclick": 0,
+            "source_type": 1,
+            "source": "<a href='http://weibo.com' rel='nofollow'>Emerge Wi-Fi</a>",
+            "favorited": false,
+            "pic_ids": [],
+            "geo": null,
+            "user": {
+                "id": 3561737261,
+                "screen_name": "Techcrunch中国",
+                "province": "11",
+                "city": "1",
+                "description": "TechCrunch中国官方微博",
+                "url": "",
+                "profile_image_url": "http://tva2.sinaimg.cn/crop.0.0.750.750.180/d44bcc2djw8etjjd5cpzbj20ku0kumxc.jpg",
+                "gender": "m",
+                "followers_count": 44281,
+                "friends_count": 47,
+                "pagefriends_count": 0,
+                "following": true,
+                "allow_all_act_msg": false,
+                "verified": true,
+                "verified_type": 1,
+                "remark": "",
+                "avatar_large": "http://tva2.sinaimg.cn/crop.0.0.750.750.180/d44bcc2djw8etjjd5cpzbj20ku0kumxc.jpg",
+                "avatar_hd": "http://tva2.sinaimg.cn/crop.0.0.750.750.180/d44bcc2djw8etjjd5cpzbj20ku0kumxc.jpg",
+                "verified_reason": "TechCrunch中国官方微博",
+                "verified_trade": "TechCrunch中国官方微博",
+                "verified_reason_url": "",
+                "verified_source": "TechCrunch中国官方微博",
+                "verified_source_url": "",
+                "follow_me": false,
+                "mbtype": 0,
+                "mbrank": 0,
+                "level": 1,
+                "extend": {
+                    "mbprivilege": "0000000000000000000000000000000000000000000000000000000000000000"
+                },
+                "badge": {
+                    "uc_domain": 0,
+                    "enterprise": 0,
+                    "anniversary": 0,
+                    "taobao": 0,
+                    "travel2013": 0,
+                    "gongyi": 0,
+                    "gongyi_level": 0,
+                    "bind_taobao": 0,
+                    "hongbao_2014": 0,
+                    "suishoupai_2014": 0,
+                    "dailv": 0,
+                    "zongyiji": 0,
+                    "vip_activity1": 0
+                },
+                "badge_top": "",
+                "has_ability_tag": 0,
+                "credit_score": 80,
+                "user_ability": 0,
+                "urank": 19
+            },
+            "reposts_count": 0,
+            "comments_count": 0,
+            "attitudes_count": 0,
+            "isLongText": false,
+            "mlevel": 0,
+            "visible": {
+                "type": 0,
+                "list_id": 0
+            },
+            "biz_feature": 0,
+            "darwin_tags": [],
+            "rid": "0_0_1_2596588758887302174",
+            "userType": 0,
+            "mblogid": "D6gQviSJ2",
+            "scheme": "sinaweibo:\/\/detail\/?mblogid=D6gQviSJ2",
+            "mblogtypename": "",
+            "attitudes_status": 0,
+            "recom_state": -1,
+            "is_disable_highlight": "0",
+            "is_controlled_by_server": "0",
+            "timestamp_text": "",
+            "expire_after": "0"
+        }
+    }
+}

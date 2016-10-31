@@ -1,0 +1,730 @@
+[
+    {
+        "name": "MirrorKeyVR 镜匙",
+        "products": "VR游戏,VR电影",
+        "url": "http://mirrovr.com/",
+        "desc": "MirrorKeyVR是一家专注于原创VR内容开发的初创型虚拟现实公司，我们主要以VR娱乐内容为方向，产品涉及VR游戏、VR动画电影等，兼容PC、主机及主流移动VR平台。",
+        "logo": "MirrorKeyVR 镜匙.png"
+    },
+    {
+        "name": "FuturePlay",
+        "products": "",
+        "url": "http://www.futureplay.co/",
+        "desc": "FuturePlay是曾经把自己的企业成功地出售给KT, intel等国内，国外大企业的风险企业专家们设立的创新公司。FuturePlay利用各专家成功的经验养成IT, Tech startup企业或者投资在新成立而前途光明的小企业。",
+        "logo": "FuturePlay.png"
+    },
+    {
+        "name": "31会议",
+        "products": "Digitalevent",
+        "url": "http://www.31huiyi.com/",
+        "desc": "31会议，中国领先的会议科技服务商，隶属于上海八彦图信息科技有限公司。公司创办于2010年，总部位于上海，在北京、深圳、杭州、广州、西安、成都、苏州设有办公室及技术服务中心，业务辐射全国。公司致力于会议产业，依托互联网及移动技术，以提升会议品质与效率为公司使命，通过PC与移动端，帮助用户真正实现会议更轻松、更高效、更成功。",
+        "logo": "31会议.png"
+    },
+    {
+        "name": "Bespin Global",
+        "products": "托管云,托管服务,专业服务",
+        "url": "http://www.bespinglobal.com/",
+        "desc": "\"你懂云吗？Bespin Global可以明确回答这个问题。我们拥有很多为各种本土和海外公司提供开发云、实施和运营服务的成功案例，并且处理在运营过程中产生的安全问题。\n我们使用AWS、微软Azure和Flexcloud的智能数据库，为各行业客户进入混合云环境迅速实现结构优化。\n\"",
+        "logo": "Bespin Global.png"
+    },
+    {
+        "name": "基调网络 Network Bench",
+        "products": "听云TINGYUN",
+        "url": "",
+        "desc": "听云是国内领先的应用性能管理（APM）解决方案提供商，是入选Gartner APM魔力象限的唯一中国企业。拥有听云App、听云Network、听云Server、听云Sys、听云Browser五条重要产品线。从移动客户端到服务器端再到网络层面，全方位帮助客户实时监控定位性能问题。",
+        "logo": "基调网络 Network Bench.png"
+    },
+    {
+        "name": "Emerge",
+        "products": "Edge",
+        "url": "http://emerge.cc/",
+        "desc": "Emerge提供全球领先的场景化无线网络技术，打破了现有互联网架构壁垒，让网站与App自由感知本地网络内用户是谁、在哪里以及相关情景。在线下商城、会议、餐饮、公共设施和景区等人流入口对现有搜索、社交、娱乐等网络服务直接进行场景化定制改造，拉近线下实体服务与网络信息距离，给用户提供全新的浸入式网络体验。为线下商家精确推广与精细化运营提供数据基础。",
+        "logo": "Emerge.png"
+    },
+    {
+        "name": "平凯星辰 PingCAP",
+        "products": "",
+        "url": "http://www.pingcap.com/",
+        "desc": "PingCAP是全球领先的NewSQL 分布式数据库方案提供商，参考 Google F1/Spanner 实现了水平伸缩,一致性的分布式事务,多副本同步复制等重要 NewSQL 特性，提供高性能的跨数据中心容灾分布式数据库产品TiDB，是企业在云上的最佳关系型云数据库解决方案",
+        "logo": "平凯星辰 PingCAP.png"
+    },
+    {
+        "name": "厅客 Teenker",
+        "products": "厅客Teenker",
+        "url": "http://www.teenker.com/",
+        "desc": "厅客，中国领先的C2C个人服务交易平台，包括APP和微信端。个人服务供给方通过产品可便捷发布和出售服务增加收入；消费者可以通过平台快速获取精准低价的优质服务。厅客服务类别很广，包括情感咨询、职业指导、兴趣课程、造型搭配等。",
+        "logo": "厅客 Teenker.png"
+    },
+    {
+        "name": "五一金控 Wuyijinkong",
+        "products": "",
+        "url": "",
+        "desc": "51云金融是北京五一金控信息技术有限公司旗下产品，北京五一金控信息技术有限公司于2015年9月在北京注册成立,注册资金5128.21万元人民币。51云金融由专业的互联网金融团队打造而成，依托国资背景的互联网金融公司五一金控，提供最具竞争力的互联网金融流量变现专业服务。",
+        "logo": "五一金控 Wuyijinkong.png"
+    },
+    {
+        "name": "希珥瑞思 Serious",
+        "products": "ENJOY 精选美食电商",
+        "url": "http://enjoy.ricebook.com/",
+        "desc": "\"ENJOY-精选美食电商\n是一款提供高端餐饮体验的电商平台。我们以专业美食买手的诚恳态度，精选城中优质餐厅与快递类产品，选择一种既饱含情感又富有美感的呈现方式，帮您解决“如何吃得更好”这一难题，我们冀望从美食出发，建立一个完整的美学系统，满足都市人在生活方式领域的种种需求。\n\"",
+        "logo": "希珥瑞思 Serious.png"
+    },
+    {
+        "name": "英梅吉 IMG",
+        "products": "手.视交互系统 Hand CV gesture interaction system",
+        "url": "http://www.imgnb.com/",
+        "desc": "英梅吉有十多年的计算机视觉技术积累，自主研发了跨平台实时渲染引擎、图像搜索引擎等技术。今年，公司会针对移动AR/VR推出基于单目摄像头的手势交互系统和空间定位产品，致力于成为移动VR/AR交互领域的领导者。",
+        "logo": "英梅吉 IMG.png"
+    },
+    {
+        "name": "盈衍网络",
+        "products": "黄金钱包 G-banker",
+        "url": "http://www.g-banker.com",
+        "desc": "黄金钱包是由北京盈衍网络科技有限公司开发的解决黄金流动性的互联网产品。“黄金钱包”包括网站端（www.g-banker.com）及app端，开展面向普通用户的买金、卖金、存金、提金、黄金生息业务。",
+        "logo": "盈衍网络.png"
+    },
+    {
+        "name": "悠悠 YoYo",
+        "products": "mvp01",
+        "url": "https://www.mvp01.com/",
+        "desc": "我们成立于2014年，致力于打造可信赖的互联网软件众包平台，运用共享经济理念为初创公司和中小企业提供品质可控、体验卓越的软件开发服务，以与客户共同打造成功产品为核心，帮助客户实现从（0）商业创意到（1）可用产品的关键跨越。",
+        "logo": "悠悠 YoYo.png"
+    },
+    {
+        "name": "有路前行 Uoolu",
+        "products": "有路网/uoolu.com,有路APP/uoolu APP",
+        "url": "http://www.uoolu.com/",
+        "desc": "有路uoolu.com是服务于中国人的跨境房产在线投资平台。通过互联网打造在线投资平台，引入全球优质房产及金融投资产品, 提供跨境投资的信息、交易及金融服务，帮助中国7000万中产投资全球，是中国最具活力的跨境房产互联网平台。",
+        "logo": "有路前行 Uoolu.png"
+    },
+    {
+        "name": "中广瑞波 CHINARAINBOW",
+        "products": "亿闪联 Intelligent Quick Pay",
+        "url": "http://www.chinarainbownet.org/",
+        "desc": "公司成立于2000年，是一家提供智能卡增值服务与产品的科技公司，秉承做“多属性ID管理服务专家”的理念，以持续推动NFC及安全智能卡多应用等前沿技术在通信、城市服务、金融等领域的融合使用为己任,全力打造开放TSM平台的NFC支付解决方案。",
+        "logo": "中广瑞波 CHINARAINBOW.png"
+    },
+    {
+        "name": "众清",
+        "products": "COCLEAN随身净化器",
+        "url": "http://www.coclean.com/",
+        "desc": "北京众清科技有限公司致力于让科技与智能为改善人们的生活环境而服务，努力将实验室尖端环境科技与大数据、移动互联网等新技术衔接，成为国内乃至全球领先的科技企业。",
+        "logo": "众清.png"
+    },
+    {
+        "name": "B2LiNK",
+        "products": "",
+        "url": "http://www.b2link.co.kr/",
+        "desc": "\"B2LiNK为中国及东南亚电商提供韩国品牌信息（库存量、销售人气度）及符合各平台特点的信息. \n为韩国美妆品牌提供各平台、各地区的销售分析信息及当地趋势信息-> 阻隔非授权公司的市场进入. 日后累积市场数据后，将以大数据分析为根基扩张事业领域\n\"",
+        "logo": "B2LiNK.png"
+    },
+    {
+        "name": "智谷动力 SVINSIGHT",
+        "products": "硅谷密探 Svinsight",
+        "url": "http://www.svinsight.com/",
+        "desc": "硅谷第一科技媒体，为你带来最生动的产品报道和推荐、独家的硅谷成功创业者在线交流，连接中美创业者。读硅谷，看硅谷，去硅谷！",
+        "logo": "智谷动力 SVINSIGHT .png"
+    },
+    {
+        "name": "尚骞",
+        "products": "",
+        "url": "",
+        "desc": "公司希望通过将“大铅笔”这个品牌打造成为VR第一意见领袖，来实现“为VR行业带来更多真正的爱好者，为VR爱好者提供最优质的内容和服务”的目的。",
+        "logo": "尚骞.png"
+    },
+    {
+        "name": "飞抵健身 Fiti Fitness",
+        "products": "Fiti Fitness APP",
+        "url": "http://www.letsfiti.com/zh/",
+        "desc": "看下附近认证教练能带领你达到哪种健身健康健美效果，减肥，塑形，增肌，Crossfit，瑜伽，健美操，户外运动等50多种私教课程，随时随地，一键专属！",
+        "logo": "飞抵健身 Fiti Fitness.png"
+    },
+    {
+        "name": "光合联萌 Sunallies",
+        "products": "光合联萌APP Sunallies APP",
+        "url": "http://www.sunallies.com/",
+        "desc": "光合联萌是上海一家B2P互联网金融平台。上市公司东方日升（300118）在上海的全资子公司。用户和投资人可以通过我们平台，购买活期、定期产品和我们即将上线的众筹产品，获得光伏电站的股权收益权。相对于传统的P2P平台，电费和补贴收益更稳定更安全，同时我们解决了光伏行业融资困难的一大痛点。",
+        "logo": "光合联萌 Sunallies.png"
+    },
+    {
+        "name": "斯波尼雅 SPONIA",
+        "products": "开玩青训 OpenPlay Youth",
+        "url": "",
+        "desc": "“开玩青训”（OpenPlay Youth）为足校、青训俱乐部、中小学校园等提供一套整体的数据化解决方案和管理系统，提升教学效率与管理水平，为青训机构完成服务体验的真正升级。",
+        "logo": "斯波尼雅 SPONIA.png"
+    },
+    {
+        "name": "依时货拉拉",
+        "products": "货拉拉APP",
+        "url": "http://www.huolala.cn/",
+        "desc": "货拉拉是一款同城即时整车货运APP，在APP平台可对接有需求的货主与附近司机，其业务类似于货运版的优步。公司于2014年12月进入中国大陆并已覆盖23座城市，货拉拉创始于香港（Easyvan），已在东南亚（Lalamove）4座城市开展业务。",
+        "logo": "依时货拉拉.png"
+    },
+    {
+        "name": "掌贝 Zhangbei",
+        "products": "\"掌贝Z3 Zhangbei Z3,拉客手环prospecting wristband, SAAS云平台SaaS cloud platform\n\"",
+        "url": "http://www.yunnex.com/",
+        "desc": "掌贝是国内首个店铺消费管理和营销服务平台，通过强大硬软件技术，帮助商户实现一体化经营和智能精细化管理。公司具有二维码支付和智能POS方面的多项专利，目前已经拥有味千、赛百味、九毛九、外婆家等著名品牌客户。",
+        "logo": "掌贝 Zhangbei.png"
+    },
+    {
+        "name": "binaryvr",
+        "products": "",
+        "url": "http://www.binaryvr.com/",
+        "desc": "BinaryVR develops real-time facial expression tracking technology for virtual reality.",
+        "logo": "binaryvr.png"
+    },
+    {
+        "name": "GAUDIO",
+        "products": "",
+        "url": "",
+        "desc": "Sound for VR. Based on MPEG-H winning technology, we provide immersive and interactive audio solution for VR.",
+        "logo": "GAUDIO.png"
+    },
+    {
+        "name": "JW NEST",
+        "products": "",
+        "url": "",
+        "desc": "W NEST is V.R Contents developer in Korea. We are making virtual love simulation game & Social Casino VR Game.",
+        "logo": "JW NEST.png"
+    },
+    {
+        "name": "Macrograph",
+        "products": "",
+        "url": "http://www.macrograph.co.kr/",
+        "desc": "We are creators producing new motion picture experiences through VR storytelling.",
+        "logo": "Macrograph.png"
+    },
+    {
+        "name": "POLARIANT",
+        "products": "",
+        "url": "",
+        "desc": "POLARIANT invented a precise 3D position and orientation sensor technology based on light polarization, and develops motion controller for mobile VR.",
+        "logo": "POLARIANT.png"
+    },
+    {
+        "name": "Reality Reflection",
+        "products": "",
+        "url": "",
+        "desc": "RealityReflection creates 3D human characters in photo-real quality with technology.",
+        "logo": "Reality Reflection.png"
+    },
+    {
+        "name": "Skonec",
+        "products": "",
+        "url": "http://www.skonec.com/",
+        "desc": "First, to be Best! Skonec invented \"Motal Blitz VR\" which is the world`s first adventure Gun Shooting VR game!",
+        "logo": "Skonec.png"
+    },
+    {
+        "name": "SegmentFault",
+        "products": "SegmentFault 线上社区 SegmentFault Online Community",
+        "url": "https://segmentfault.com/",
+        "desc": "SegmentFault 自 2012 年成立至今，已聚集超过 100 万的开发者用户，成为中国最受关注的中文开发者社区，并致力于持续提供纯粹的技术交流平台，共同创造属于开发者的时代。",
+        "logo": "SegmentFault.png"
+    },
+    {
+        "name": "酷家乐 Kujiale",
+        "products": "酷家乐Kujiale",
+        "url": "http://www.kujiale.com/",
+        "desc": "酷家乐总部设在浙江杭州，以分布式并行计算和多媒体数据挖掘为技术核心，推出3D在线云设计软件，5分钟生成方案和清单，10秒生成高清效果图，并且一键生成VR方案。现在酷家乐平台上有超过50万注册设计师，近600万注册业主，并服务超过2000家品牌公司。",
+        "logo": "酷家乐 Kujiale.png"
+    },
+    {
+        "name": "同盾科技 Tongdun Technology",
+        "products": "\"同盾风控云Tongdun Risk Cloud\n\"",
+        "url": "https://www.tongdun.cn/",
+        "desc": "同盾科技成立于2013年，总部位于浙江杭州，是目前中国最大的第三方大数据风控服务提供商。自创立以来，同盾始终坚持“跨行业联防联控”的理念，为非银行信贷、银行、保险、基金理财、三方支付、航旅、电商、O2O、游戏、社交平台等多个行业的客户提供基于大数据的风险控制与反欺诈服务。",
+        "logo": "同盾科技 Tongdun Technology.png"
+    },
+    {
+        "name": "云算信达数据技术 Incloudcredata Data Technology",
+        "products": "",
+        "url": "",
+        "desc": "云算信达旗下的云贷365是一个专业从事电商企业第三方信用评价与金融中介服务的企业。公司以大数据平台为技支撑，以信用评价为业务抓手，以优质金融服务为目标，汇聚了大数据领域、信用评价领域及金融领域的专家团队联合开发。",
+        "logo": "云算信达数据技术 Incloudcredata Data Technology.png"
+    },
+    {
+        "name": "云造科技 innomake tech",
+        "products": "云马C1 UMA C1 ,云马MINI UMA MINI",
+        "url": "http://yunzao.cn/",
+        "desc": "云造是一家创新型的“移动”互联网公司，从事出行领域的软硬件产品设计、系统研发。旨在以信息技术和设计创新打造智行车™，为人们创造智慧绿色出行的美好未来，为产业带来全新的变革机遇。",
+        "logo": "云造科技 innomake tech.png"
+    },
+    {
+        "name": "幻维数码",
+        "products": "",
+        "url": "http://www.shmds.com/",
+        "desc": "上海幻维数码创意科技有限公司是上海东方传媒集团有限公司（SMG）旗下成员单位。公司长期致力于电视媒体方面的品牌策划及制作服务，积累了十余年的媒体品牌宣传及内容的创意及制作经验，同时也是上海和华东最重要的商业广告及CG动画片制作基地。",
+        "logo": "幻维数码.png"
+    },
+    {
+        "name": "极客公园",
+        "products": "",
+        "url": "www.geekpark.net",
+        "desc": "极客公园成立于2010年，是中国创新者的大本营。通过对前沿科技的观察报道，业界一流的线下活动，众筹孵化等全方位的创业服务，极客公园汇聚了中国最广大的创新、创业人群。在内容媒体、会展公关、创业服务三大业务线协同发展下，极客公园帮助中国创业者更有效率的探索未来，链接更多的资源，让优秀的科技创业公司得以更快速的成长。",
+        "logo": "极客公园.png"
+    },
+    {
+        "name": "MoPaaS 魔泊云",
+        "products": "MoPaaS魔泊云",
+        "url": "http://www.mopaas.com/",
+        "desc": "MoPaaS是由 Anchora 打造的中国领先的新一代开放云计算应用平台，以满足企业级和开发者用户对云计算服务的多元需求。MoPaaS 具有开放、敏捷、智能和安全的特点，并助力用户实现对应用生命周期的自动化管理和计算资源的多元化管理及动态调配，帮助用户节省 IT 支出和应用提供的成本，缩短应用上线时间以及简化IT和应用的管理。",
+        "logo": "MoPaaS 魔泊云.png"
+    },
+    {
+        "name": "界面新闻 Jiemian",
+        "products": "",
+        "url": "http://www.jiemian.com/",
+        "desc": "“界面新闻”，全球估值蹿升速度最快的新媒体。由中国第一大报业集团上海报业，联手弘毅投资、国泰君安、小米科技等推出，即将成为一家围绕中产阶级用户，提供新闻、投资、购物、招聘及社交服务的互联网平台。",
+        "logo": "界面新闻 Jiemian.png"
+    },
+    {
+        "name": "精硕科技 AdMaster",
+        "products": "",
+        "url": "http://www.admaster.com.cn/",
+        "desc": "AdMaster是领先的营销数据技术公司，利用先进的大数据技术帮助品牌指导营销策略并预先量化营销效果。AdMaster架起了品牌、广告主与消费者之间的桥梁，是贯穿各行业和领域的数据枢纽。通过监测和分析不同行业的品牌在多种平台上的数字营销投放，AdMaster已经建立了行业标准、媒介规划工具，并积累了丰富的实践案例，帮助品牌实现数字营销投资收益的最大化。",
+        "logo": "精硕科技 AdMaster.png"
+    },
+    {
+        "name": "酷景传媒 King Cool Media",
+        "products": "",
+        "url": "http://www.is360.com/",
+        "desc": "360全景互动视频领导者，我们希望颠覆传统视频， 创新异地营销，带您穿越时空，身临其境！联盟各大媒体和4A广告公司一起，使用360全景互动视频提供解决方案， 满足客户在企业官网、移动与PC端、视频网站、微博、Facebook，Twitter等社交媒体和公益活动定向展示传播。",
+        "logo": "酷景传媒 King Cool Media.png"
+    },
+    {
+        "name": "宁峰网络工程 Ningfeng Network Engineering",
+        "products": "Lazycard懒人用卡",
+        "url": "",
+        "desc": "懒人用卡是你身边的信用卡达人。懒人用卡为你推荐最适合自己的信用卡，并一键办理。扫一扫还能识别出你手中持有的信用卡种类、权益及优惠。无论是网购一族，还是常旅客，它都是用户最信赖的专属信用卡管家。",
+        "logo": "宁峰网络工程 Ningfeng Network Engineering.png"
+    },
+    {
+        "name": "联合创业办公社 People Squared",
+        "products": "联合创业办公社 People Squared",
+        "url": "http://www.people-squared.com/",
+        "desc": "联合创业办公社（P2）是国内最大的联合办公空间。从2010年创立伊始就注入了北美coworking概念最纯正的基因，如今已经成为中国互联网创业的空间首选，聚集了国内最优秀的创业项目和最有想法的创业团队。",
+        "logo": "联合创业办公社 People Squared.png"
+    },
+    {
+        "name": "LinkSprite 联思普瑞",
+        "products": "神目Deepcam",
+        "url": "http://www.linksprite.com/",
+        "desc": "\"受益于大数据的出现和大规模计算能力的提升，深度学习已然成为最活跃的计算机研究领域之一。\n神目（Deepcam)视频系统是LinkSprite旗下智慧家庭系统。 它集传感器融合和多种深度学习视频音频分析应用，解决家庭安防，婴儿监控和养老服务等问题。\n\"",
+        "logo": "LinkSprite 联思普瑞.png"
+    },
+    {
+        "name": "亮风台信息科技 HiScene Information Technology",
+        "products": "HiAR SDK,HiAR Glasse",
+        "url": "https://www.hiscene.com/",
+        "desc": "亮风台致力于提供最自然人机交互、挖掘最深度数据价值。不断突破与创新，打造软硬结合平台化的增强现实产品与服务。已率先推出技术领先的增强现实开发平台HiAR SDK以及国内首款基于视觉交互的增强现实智能眼镜HiAR Glasses。",
+        "logo": "亮风台信息科技 HiScene Information Technology.png"
+    },
+    {
+        "name": "拎包游 Linbaoyou",
+        "products": "拎包游 Linbaoyou",
+        "url": "http://www.linbaoyou.com/",
+        "desc": "\"“拎包就走，任性出行！”\n拎包游是一个真正为消费者提供专业境外旅游服务的网络平台，其中包括签证办理，组团旅游，分期付款等服务。拎包游希望通过提供可分期且完善的消费体验，开启年轻人新的出国\n旅行思维习惯，让境外旅行成为人们假期活动的日常。\n\"",
+        "logo": "拎包游 Linbaoyou.png"
+    },
+    {
+        "name": "凌感科技 uSens",
+        "products": "印象湃 Impression Pi",
+        "url": "http://www.usens.com/",
+        "desc": "uSens凌感，2013年创办于美国硅谷，是一家专注为AR/VR提供三维交互解决方案的高科技公司。公司聚焦于移动端，用户可以无需穿戴任何外设或手柄，将手部、头部以及身体等在三维空间中进行最自然、沉浸式的人机交互。",
+        "logo": "凌感科技 uSens.png"
+    },
+    {
+        "name": "钱大人 Qiandaren",
+        "products": "钱大人Qiandaren",
+        "url": "http://www.qiandaren.com/",
+        "desc": "钱大人是基于大数据智能化的自动理财应用，为用户提供自动化、以算法投资为基础的投资组合与管理。钱大人综合了大数据分析、智能算法投资等多种优点，让用户开启智能理财、数字化理财的全新投资模式。",
+        "logo": "钱大人 Qiandaren.png"
+    },
+    {
+        "name": "好近 QFPay",
+        "products": "好近 QFPay",
+        "url": "http://haojin.in/",
+        "desc": "\"好近（原“钱方科技”）成立于2011年，秉着“通过科技与创新，让中小商户用最低的成本，做更多的生意”的理念，专注服务中小商户，提供从银联刷卡到移动支付的线上线下聚合支付收款方案。在2015年，钱方好近在支付的基础上踏出了一步，推出智慧商圈“好近”平台，以支付为入口，通过数据链接商户和消费者，完成营销、店铺市场规划和金融借贷等商业运营服务。\n2016年，好近海外业务追随中国游客的脚步，以香港为起点布局东南亚、欧美等地的旅游城市，结合本地及海外的移动支付服务，为中国的消费者出行提供便利，同时为当地中小商户提供数据化智慧商圈服务。\n\"",
+        "logo": "好近 QFPay.png"
+    },
+    {
+        "name": "萨摩耶 Samoyed",
+        "products": "\"省呗Save Bar\n\"",
+        "url": "http://www.smyfinancial.com/",
+        "desc": "萨摩耶金服是一家依托强大FinTech能力，为用户提供“更普惠更温暖的”互联网金融服务的新型金融科技公司，以首款产品“省呗”切入消费金融市场，为用户提供信用卡管理、优惠用卡指引、更低利率余额代偿等互联网金融服务。",
+        "logo": "萨摩耶 Samoyed.png"
+    },
+    {
+        "name": "维纳 Winner",
+        "products": "佰付美Beauty Pay",
+        "url": "http://www.baifm.cn/",
+        "desc": "\"维纳——中国移动互联网技术领跑者\n国内最早从事NUI技术开发及媒体应用、最早涉及智能POS开发的公司之一，中国首个尝试支付领域与通讯领域相结合的互联网公司。\n我们旨在为客服提供另一种全新的工作、生活体验。我们的愿景是，让用户、商户体验便捷支付的同时享受免费的通讯服务。\n\"",
+        "logo": "维纳 Winner.png"
+    },
+    {
+        "name": "艾立可金融 AREC Finance",
+        "products": "INSOBO供应链金融加速器 INSOBO Supply Chain Finance Accelerator",
+        "url": "",
+        "desc": "艾立可金融是一家创新的金融科技公司，通过云技术将传统的供应链金融业务实现SaaS（软件即服务）化。企业和电商平台都可通过艾立可金融提供的INSOBO供应链金融在线加速器产品，快速部署和其上下游的云端供应链金融业务平台。",
+        "logo": "艾立可金融 AREC Finance.png"
+    },
+    {
+        "name": "OK车险 OK Auto Insurance",
+        "products": "OK车险 OK Auto Insurance",
+        "url": "http://www.okchexian.com/",
+        "desc": "OK车险APP从车险角度切入，延伸加油充值、违章代办等服务。基于数据围绕车场景创新金融产品，研发与贴条、堵车相关的类保险服务。国内首创“手机车联网”技术，无需智能硬件，通过手机获取用户的驾驶行为数据。",
+        "logo": "OK车险 OK Auto Insurance.png"
+    },
+    {
+        "name": "冰鉴信息科技 ceKredit",
+        "products": "",
+        "url": "http://www.icekredit.com/",
+        "desc": "上海冰鉴信息科技有限公司是设立于陆家嘴金融区内，并分别在南京、常州、成都、美国洛杉矶设立了分公司。公司主要业务是使用机器学习算法和大数据相关技术，创新地对小微企业和个人进行360度的全方位信用评估。",
+        "logo": "冰鉴信息科技 ceKredit.png"
+    },
+    {
+        "name": "TopGeek",
+        "products": "",
+        "url": "http://topgeek.org/",
+        "desc": "TopGeek创立于2010年，是上海最大的线下技术社群，以技术视角关注IT产业发展，以深度分享推进产业技术成长，致力于弘扬技术创新，倡导分享、开放和协作，努力打造高质量的IT技术交流线下平台。举办过移动互联网大会、运维安全大会、高性能架构大会、云计算大会、架构师大会、增长黑客大会等20多次大会，200多场极客沙龙、Hackathon等活动。",
+        "logo": "TopGeek.png"
+    },
+    {
+        "name": "聚信立 Juxinli",
+        "products": "聚信立报告, 聚蜜罐,聚透析",
+        "url": "https://www.juxinli.com/",
+        "desc": "\"聚信立一家互联网大数据公司，致力于让金融机构也能轻松获取互联网数据、驾驭互联网数据，从而更好地判断借款人的信用程度。\n聚信立拥有国内第一批从事风险评分卡开发的行业精英，曾经为益佰利(Experian)、渣打银行(Standard Chartered Bank)、通用电气金融公司(GE Capital)、美国发现金融公司(Discover)等国内外知名企业提供消费者金融和互联网数据分析服务。\n\"",
+        "logo": "聚信立 Juxinli.png"
+    },
+    {
+        "name": "触宝 COOTEK",
+        "products": "触宝电话,触宝输入法",
+        "url": "http://www.chubao.cn/",
+        "desc": "\"触宝成立于2008年，是唯一荣获GSMA颁发的全球移动创新大奖的亚洲公司，并多次被TechCrunch等海外媒体报道。\n目前，其两款产品在全球用户量已超6亿。触宝电话是国内首款日活超千万的通讯类App；触宝输入法支持超过100多种语言，占有全球Android手机20%的市场份额。\n\"",
+        "logo": "触宝 COOTEK.png"
+    },
+    {
+        "name": "斗象科技 Tophant Information Technology",
+        "products": "",
+        "url": "http://www.vulbox.com/",
+        "desc": "上海斗象信息科技有限公司（以下简称斗象科技）成立于2014年5月，是以国内最为知名的安全网站FreeBuf.COM为基础建立的新兴安全服务提供商。斗象科技旗下的企业级安全服务产品 - 漏洞盒子(www.vulbox.com)，借助平台上汇聚的众多顶尖安全专家和技术团队，致力于为客户提供完备的下一代互联网安全服务。",
+        "logo": "斗象科技 Tophant Information Technology.png"
+    },
+    {
+        "name": "邻趣 Linqu",
+        "products": "\"邻趣个性化跑腿服务 Linqu errand-running services\n\"",
+        "url": "http://linjia.me",
+        "desc": "邻趣是国内领先的C2C跑腿服务平台。主打业务包括随意购、同城快送、手机快修、代排队等特色跑腿服务，以及咖啡、品质餐厅代购服务。2015年8月，邻趣完成了启明资本领投，IDG和盛大资本跟投的B轮融资。",
+        "logo": "邻趣 Linqu.png"
+    },
+    {
+        "name": "启迪之星",
+        "products": "",
+        "url": "http://www.tusstar.com/",
+        "desc": "启迪之星是清华科技园孵化器专业运营管理公司，始建于1999年，是火炬中心认定的国家级孵化器之一，肩负着清华科技园科技创新服务的开展以及众创空间集群的运营。启迪孵化器已累计孵化企业超2000 家，并已有27 家企业成功上市,40家企业间接上市。",
+        "logo": "启迪之星.png"
+    },
+    {
+        "name": "图漾科技 Percipio technology",
+        "products": "深度摄像头 3D视觉传感器 Depth Camera  3D vision sensor",
+        "url": "http://percipio.xyz/",
+        "desc": "图漾科技是一家专业从事计算视觉的技术公司，专注于三维深度信息测量的基础性技术研究。旨在为我们的客户提供各种高效可靠的三维测量解决方案，增强产品对三维世界的感知能力，帮助客户开发更加智能的产品。未来的现实世界和数字世界的信息将高度融合渗透，我们为您提供感知世界的“眼睛”。",
+        "logo": "图漾科技 Percipio technology.png"
+    },
+    {
+        "name": "STARY 兔洞电子科技",
+        "products": "Stary Electric Skateboard  Stary 电动滑板",
+        "url": "http://stary.io/",
+        "desc": "Stary电动滑板是一个出行工具，但有不止于工具那么简单，它会为你带来一种享受新科技和生活方式的滑板。我们的目标就是打造出世界上最轻最薄的电动滑板。",
+        "logo": "STARY 兔洞电子科技.png"
+    },
+    {
+        "name": "享知信息科技 Leangoo Information Technology",
+        "products": "Leangoo",
+        "url": "https://www.leangoo.com/",
+        "desc": "Leangoo是一款永久免费、轻量，体验出众的敏捷项目协作工具。Leangoo的核心是看板，通过看板共享和实时同步团队工作进行可视化协同, 团队工作体现为卡片，内容可以是需求、任务、问题等。拖拽卡片到不同列表展示进展，泳道实现任务的分组对应。燃尽图展示团队进展。Leangoo融入了先进的敏捷思维，由业绩知名敏捷专家精心打造而成。",
+        "logo": "享知信息科技 Leangoo Information Technology.png"
+    },
+    {
+        "name": "Maxent 行邑信息科技",
+        "products": "Maxent Fraudynamics 猛犸反欺诈平台",
+        "url": "http://mofa.maxent-inc.com/",
+        "desc": "Maxent行邑科技，以全力保护企业互联网及移动业务安全为目标，贯穿以精准、理智、充满革新力的未来极客精神，基于全栈被动式设备指纹专利技术，为金融、互联网金融、游戏、社交等提供欺诈预防和风险识别的智能化大数据分析服务。",
+        "logo": "Maxent 行邑信息科技.png"
+    },
+    {
+        "name": "朋友印象 PengYouYinXiang",
+        "products": "朋友印象 PengYouYinXiang",
+        "url": "http://www.pyyx.com/",
+        "desc": "朋友印象是一款由软银和腾讯联合投资的下一个千亿美金级别社交软件。朋友印象打通了熟人社交和陌生人社交的界限，通过朋友之间共同写就的人生传记来揭示每个人的全景信息，从而让人与人之间的社交更加透明化和高效",
+        "logo": "朋友印象 PengYouYinXiang.png"
+    },
+    {
+        "name": "创客星球 Themakers",
+        "products": "创客星球 Themakers",
+        "url": "http://www.themakers.cn/",
+        "desc": "创客星球成立于2014年，是国内最具影响力的创客文化展示分享平台，为创业者、发明家、设计师和所有创造性人群提供实践梦想的机会。公司拥有“创客TV”、“创客社区”、“创客星球众筹平台”三大产品结构。",
+        "logo": "创客星球 Themakers.png"
+    },
+    {
+        "name": "Numerique 智关",
+        "products": "Persona用户价值管理系统",
+        "url": "http://www.imnumerique.com/",
+        "desc": "Numerique智关，为品牌客户提供数据驱动营销的全渠道营销解决方案。智关自行研发的Persona用户价值管理系统，有效整合企业营销端用户数据，并结合智关科学的消费者生命周期管理经验，为企业精益化营销提供专业的数据服务及一站式营销解决方案的支持。",
+        "logo": "Numerique 智关.png"
+    },
+    {
+        "name": "众墨信息科技 Zhongmo VR Technologies",
+        "products": "\"四维口袋虚拟家装 4dpoc Virtual Interior Design\n\"",
+        "url": "http://www.4dpoc.com/",
+        "desc": "上海众墨信息科技有限公司将VR技术与室内设计结合，搭建设计及体验平台，让用户自由搭配设计、真实感受未来的家。它通过整合优秀设计师、一流供应商和业主，不仅让设计更加容易，而且使供应链和装修过程更加透明。",
+        "logo": "众墨信息科技 Zhongmo VR Technologies.png"
+    },
+    {
+        "name": "岚锋创视网络科技 Arashi Vision",
+        "products": "Insta360 4K Beta 360° VR全景相机 Insta360 4K Beta 360° VR Spherical Video Camera,Insta360 Nano 360° VR全景相机 Insta360 Nano VR Spherical Video Camera",
+        "url": "http://www.insta360.com/",
+        "desc": "深圳岚锋创视网络科技有限公司是一家专业智能科技公司，致力于打造最好的360度全景相机。其创办的Insta360 是世界领先的全景相机品牌，产品广泛应用于旅游、聚会、新闻、直播、赛事、活动、婚礼等多个领域。",
+        "logo": "岚锋创视网络科技 Arashi Vision.png"
+    },
+    {
+        "name": "钱海 Oceanpayment",
+        "products": "",
+        "url": "www.oceanpayment.com",
+        "desc": "深圳市钱海网络技术有限公司（简称钱海/Oceanpayment）是国内领先的第三方跨境支付企业，总部位于深圳高新技术产业园，致力于为跨境外贸、跨境游戏、跨境旅游、跨境富媒体等互联网行业的商户提供一站式跨境支付方案。",
+        "logo": "钱海 Oceanpayment.png"
+    },
+    {
+        "name": "深略 Shenlue",
+        "products": "智慧门店 Smart Retail",
+        "url": "http://www.shenlue.cn/",
+        "desc": "深圳市深略市场研究推广有限公司（简称深略）成立于 1998 年，公司专注服务于企业线下渠道管理能力提升。深略结合10多年渠道管理研究经验，基于移动互联网+服务的理念，为企业打造“智慧门店”渠道管理系统。方案涵盖了i检客掌上门店管理系统，i评分第三方神秘客检核服务等模块，管理者通过电脑、平板、手机等智慧门店管理终端随时随地掌控督导和门店的信息，一键触发整改要求，问题闭环跟踪",
+        "logo": "深略 Shenlue.png"
+    },
+    {
+        "name": "晓舟科技 Xiao Zhou Technology",
+        "products": "每人计 my count",
+        "url": "https://www.meirenji.cn/",
+        "desc": "\"深圳市晓舟科技有限公司，是一家致力于为千万门店提供顾客数据分析的高新科技企业。\n旗下客流统计产品每人计M1采用领先机器人视觉技术，并拥有独立APP，轻松助力企业互联网+及管理移动化，目前产品已经在中国六百多个知名连锁品牌实现覆盖，这些品牌包括安踏、恒波、袋鼠、MANGO、联通等等\n\"",
+        "logo": "晓舟科技 Xiao Zhou Technology.png"
+    },
+    {
+        "name": "BeeCloud 比可科技",
+        "products": "秒支付SDK,秒支付Button,秒收款APP",
+        "url": "https://www.beecloud.cn/",
+        "desc": "\"BeeCloud专注于以云计算技术为开发者提供一站式支付解决方案。目前已经集成了银联、支付宝、微信、百度、易宝、快钱、Paypal等主流支付渠道，并且支持收款、退款、打款等支付场景。\nBeeCloud通过提供易用友好的支付SDK，帮助企业几行代码高效实现 Web、APP的支付功能，并提供稳定可靠的分布式云后端服务，保障支付流程安全流畅。\n\"",
+        "logo": "BeeCloud 比可科技.png"
+    },
+    {
+        "name": "Winking Entertainment 唯晶科技",
+        "products": "三国VR游戏体验（暂用名）",
+        "url": "http://www.winkingworks.com/",
+        "desc": "\"唯晶科技创始于2003年，是大中华地区具有国际化规模的游戏企业之一，总部位于上海，在南京和台北均设有分公司。\n唯晶在美术外包和原创游戏领域享誉盛名，原创有圣女之歌、参天律等知名IP，我们也正积极投入VR产品开发。\n\"",
+        "logo": "Winking Entertainment 唯晶科技.png"
+    },
+    {
+        "name": "数码港 Cyberport Management",
+        "products": "\"数码港创意微型基金 Cyberport Creative Micro Fund,\n数码港培育计划 Cyberport Incubation Programme,\n数码港加速器支持计划Cyberport Accelerator Support Programme\n\"",
+        "url": "http://www.cyberport.hk/",
+        "desc": "数码港为一个创意数码社区，云集超过 700 家社区成员，并由香港特别行政区政府全资拥有的香港数码港管理有限公司所管理。数码港的愿景是缔造科技企业传奇，并成为环球创新以及领先科技枢纽",
+        "logo": "数码港 Cyberport Management.png"
+    },
+    {
+        "name": "創龍企業 Dragon Creative",
+        "products": "麥格兹智能眼鏡 MAG Gaze Smart Glass",
+        "url": "http://dcesolution.com/",
+        "desc": "創龍企業解決方案有限公司成立于2013年5月。創龍的專業領域在於高端技術的軟體及硬體開發和構思及推行創新商業解決方案。其中MAD Gaze (前名:Mad Glass)這款智慧眼鏡產品於2015及2016年度榮獲多個專業獎項。",
+        "logo": "創龍企業 Dragon Creative.png"
+    },
+    {
+        "name": "奇焉 QWeUs",
+        "products": "奇焉好奇App Curious App",
+        "url": "http://www.qweus.com/",
+        "desc": "由两位斯坦福⼤学校友创办，《奇焉》研发训练认知的⼿机应用程序。用户透过简单游戏,运用脑袋,保持脑部健康。为了让小孩在多⽅面成功, 本公司推出 (1)认知训练系列游戏 (2)基于此系列的个性化课程 (3) 以软件即服务(SaaS)形式帮助企业提供认知能⼒训练。",
+        "logo": "奇焉 QWeUs.png"
+    },
+    {
+        "name": "团信 TeamNote",
+        "products": "团信 TeamNote",
+        "url": "http://www.teamnoteapp.com/",
+        "desc": "团信香港有限公司致力为企业客户开发移动生产力平台。自成立至今，团信为多间本地及国际知名企业提供服务并屡获业界奖项认可 。值得留意的是，团信更获美国著名的IT初创企业加速器Y Combinator投资。",
+        "logo": "团信 TeamNote.png"
+    },
+    {
+        "name": "享美 Shinymate",
+        "products": "享美 Shinymate",
+        "url": "http://www.shinymate.com/",
+        "desc": "享美旨在打造集整形、护肤、美妆、海外代购于一体化的全方位女性美丽伙伴，携同消费者对韩国等地上万家医美机构、整形项目进行最真实、客观的用户点评，并提供一键式预约、接机、翻译等一系列贴心增值服务。",
+        "logo": "享美 Shinymate.png"
+    },
+    {
+        "name": "\"亚马逊AWS Amazon Web Services\n\"",
+        "products": "\"云创计划 AWS Activate\n\"",
+        "url": "https://aws.amazon.com/",
+        "desc": "自 2006 年初起，亚马逊 AWS开始在云中为各种规模的公司提供技术服务平台。利用亚马逊 AWS，软件开发人员可以轻松购买计算、存储、数据库和其他基于 Internet的服务来支持其应用程序。开发人员能够灵活选择任何开发平台或编程环境，以便于其尝试解决问题。由于开发人员只需按使用量付费，无需前期资本支出，亚马逊 AWS 是向最终用户交付计算资源、保存的数据和其他应用程序的一种最经济划算的方式",
+        "logo": "亚马逊AWS Amazon Web Services.png"
+    },
+    {
+        "name": "ChinaNetCloud 云络网络科技",
+        "products": "",
+        "url": "https://www.chinanetcloud.com/",
+        "desc": "云络科技总部位于上海，由来自硅谷的技术专家于2008年创立，是世界领先的互联网服务器管理公司。云络科技是OaaS（运维即服务）理念的先驱者，专注于提供在各类公有和私有云计算平台上的大型服务器系统的设计、搭建和管理服务。",
+        "logo": "ChinaNetCloud 云络网络科技.png"
+    },
+    {
+        "name": "Chinaccelerator 中国加速",
+        "products": "",
+        "url": "http://chinaccelerator.com/",
+        "desc": "\"中国加速一年精选2期项目，每期10－15个项目，投资一定资金（3万美金），我\n们要求创业团队在加速器期间到上海办公，并提供项目路演等机会。最重要的不\n同在于，中国加速器实行mentor（导师）制度，我们邀请的导师来自各行各业\n，有投资界、营销界、500强等。\"",
+        "logo": "Chinaccelerator 中国加速.png"
+    },
+    {
+        "name": "Foowala 福哇啦",
+        "products": "",
+        "url": "http://www.foowala.com/",
+        "desc": "\"福哇啦是一个专注于中小企业的免费微信服务平台，我们把客户与服务商供应商\n连接起来，为企业的高效运营提供全面保障。\"",
+        "logo": "Foowala 福哇啦.png"
+    },
+    {
+        "name": "Robin8",
+        "products": "",
+        "url": "http://robin8.net/",
+        "desc": "\"Robin8是一个匹配KOL（意见领袖）和广告主的智能平台，运用独有的KOL／专\n家搜索引擎，支持多个社交媒体平台。Robin8 APP帮助KOL管理他们的影响力。\nKOL可以看自己的排名与其他KOL的对比。Robin8是每个人影响力的精算师并给\n他们用影响力获取收入的机会。\"",
+        "logo": "Robin8.png"
+    },
+    {
+        "name": "Rikai Labs",
+        "products": "",
+        "url": "http://www.rikai.co/",
+        "desc": "\"Rikai Labs 利用微信，结合了人工智能以及自然语言处理技术，提供有趣好玩的\n外语教材，提升你的英語水平！\"",
+        "logo": "Rikai Labs.png"
+    },
+    {
+        "name": "meXBT",
+        "products": "",
+        "url": "https://mexbt.com/",
+        "desc": "meXBT是一个结合先进技术并具备法律以及财政保护的比特币交易平台。",
+        "logo": "meXBT.png"
+    },
+    {
+        "name": "Canfreee",
+        "products": "",
+        "url": "http://www.canfreee.com/",
+        "desc": "\"CanFreee将2C的理念植入2B的产品设计中，为快速发展的创业企业提供集运营\n和管理于一体的管理财务云工具。\"",
+        "logo": "Canfreee.png"
+    },
+    {
+        "name": "TongDao 同道",
+        "products": "",
+        "url": "http://www.tongdao.io/",
+        "desc": "\"同道是一个自动化用户营销平台，让开发者可以利用实时数据，动态针对每一个用户进行智能化的多渠道个性化用户营销，帮助开发者留住每一个用户及提升用\n户的活跃度和用户价值\"",
+        "logo": "TongDao 同道.png"
+    },
+    {
+        "name": "Specifiko",
+        "products": "",
+        "url": "http://www.specifiko.com/",
+        "desc": "\"SPECIFIKO是为中国和日本医药界相关人士及专家学者和学生专门定制的医学医\n药新闻和医疗英语在线微信学习平台。我们提供超过250,000个开放取阅的医学\n，科学杂志文章和2250个免费的行业全新视频，同时呈现完整的视频英文文本和\n翻译注释。\n\"",
+        "logo": "Specifiko.png"
+    },
+    {
+        "name": "TongJuBao 同聚保",
+        "products": "",
+        "url": "http://www.tongjubao.com/",
+        "desc": "\"人人保险的诞生是为了颠覆目前失调的传统保险业。就像P2P借贷闯入了传统的\n个人借贷市场。同聚保为中国家庭带来特有的社会风险保障，并且为用户提供更\n加透明、公平的服务，这些都是传统保险业无法做到的。\"",
+        "logo": "TongJuBao 同聚保.png"
+    },
+    {
+        "name": "MingBo 鸣博",
+        "products": "",
+        "url": "http://www.mingbomedia.com/",
+        "desc": "鸣博 - 您的移动互联社交数据伙伴",
+        "logo": "MingBo 鸣博.png"
+    },
+    {
+        "name": "先锋智道 Xian Feng Zhi Dao ",
+        "products": "AA租车Aazuche",
+        "url": "http://www.aachuxing.com/",
+        "desc": "AA租车是一个致力于打造轻奢出行体验的互联网专车品牌，2013年4月创立，基于共享经济理念与“互联网＋”思维，为个人和企业用户提供安全、舒适、有品质的专车服务，满足商务、日常、家庭等多种出行需求。",
+        "logo": "先锋智道 Xian Feng Zhi Dao.png"
+    },
+    {
+        "name": "豹遞 BAODI",
+        "products": "豹遞 BAODI",
+        "url": "",
+        "desc": "豹遞是能讓您輕鬆管理全球貨物運輸的網上應用程式。您將更了解全球貨物運輸價格、供應鏈、全球運輸商及貨物追蹤。透過簡潔的介面和精密的計算系統，豹遞能迅速為您自動篩選出最優惠價格的運輸商，替您加倍節省時間、金錢。節省繁複的書面程序，只需簡單幾按，您就能輕易把貨物運出。",
+        "logo": "豹遞 BAODI.png"
+    },
+    {
+        "name": "德国智能酒店 Hotel Beacons GmbH",
+        "products": "conichi - The Hotel App 开启智能酒店的解决方案",
+        "url": "http://www.conichi.com/",
+        "desc": "德国科技公司Conichi旨在为顾客提供完美的酒店住宿体验。借助Beacon技术，酒店可以实时识别客人，在客人到达之前，提前掌握客人的偏好及开发票所需信息等，可确保快速办理入住手续。房间无须钥匙，用手机即可退房，客人将再也无须排队。",
+        "logo": "德国智能酒店 Hotel Beacons GmbH.png"
+    },
+    {
+        "name": "创派投资 InnoSpace",
+        "products": "InnoSpace",
+        "url": "http://www.innospace.com.cn/",
+        "desc": "InnoSpace是专注于互联网/移动互联网初创成长期企业的创业服务平台，坐落于创智天地园区中，旗下拥有面向种子/天使阶段的人民币创投基金和提供优质创业加速孵化服务的国际创业集训营。",
+        "logo": "创派投资 InnoSpace.png"
+    },
+    {
+        "name": "EasyTrade",
+        "products": "INZURER",
+        "url": "http://www.easytrade.com/",
+        "desc": "EasyTade is a successful internet company headquartered in Hong Kong. We have been incubated by Hong Kong Cyberport.  INZURER is our latest project of Insurance Fin-Tech.  We will deploy the new online marketplace of various types of insurance bridging insurers and customers in Asia.  Sell customized products with real-time pricing and underwriting.  ",
+        "logo": "EasyTrade.png"
+    },
+    {
+        "name": "OKLink",
+        "products": "OKLink",
+        "url": "https://www.oklink.com/",
+        "desc": "OKLink是通过区块链技术构建的全球金融传输网络，通过区块链技术推动普惠金融的全面发展，重塑金融体系架构。 OKLink 联结全球中小型金融参与者(银行、汇款公司、互联网金融平台等)， 改进价值传输网络的速度、成本及安全性。",
+        "logo": "OKLink.png"
+    },
+    {
+        "name": "POLYDIGI LIMITED 宝利数码",
+        "products": "QTagPass",
+        "url": "",
+        "desc": "宝利数码有限公司，是一间令人喜出望外的金融科技公司。宝利数码成立于香港2012年，并一直专注于解决全球网络安全，网上信用卡和移动支付的问题。",
+        "logo": "POLYDIGI LIMITED 宝利数码.png"
+    },
+    {
+        "name": "Primesom",
+        "products": "NicoVR Camera SoM  NicoVR 微相机模组",
+        "url": "",
+        "desc": "Primesom是一家专注于研发消费级VR专用芯片和模组的创业公司，我们的愿景是让每个人都能随时随地拍摄和分享VR内容。我们正与合作伙伴一起推进消费级VR设备的普及。Primesom即将发布的NicoVR SoM（System-on-Module）是全球首款微尺寸VR相机平台。",
+        "logo": "Primesom.png"
+    },
+    {
+        "name": "UNIFI金融",
+        "products": "UniFi",
+        "url": "",
+        "desc": "UniFi是北美留学生专属的消费分期品牌，通过金融科技构建全移动端借还款平台，全方位满足海外学子生活消费、旅行创业、突发周转等资金需求，协助海外华人打造征信体系、提升其信用分数，打造连接中美金融市场的金融科技平台。",
+        "logo": "UNIFI金融.png"
+    },
+    {
+        "name": "七镜 visense",
+        "products": "",
+        "url": "http://www.vi-sense.com/",
+        "desc": "公司在2015年组建并于上海成立，专注于虚拟现实技术研究，主要包括VR游戏及VR影视的内容制作。公司核心成员具有多元化背景，分别来自不同领域，并拥有多年游戏开发及影视创作经验。团队善于通过不同视角解决问题，研发符合VR体验的游戏及互动娱乐。",
+        "logo": "七镜 visense.png"
+    },
+    {
+        "name": "Vito Technologies ",
+        "products": "",
+        "url": "http://vitotechnology.com/",
+        "desc": "Vito Technologies 致力于制作国际顶尖水平的VR/AR教育游戏内容、平台及技术解决方案，同时也为线下线上VR渠道提供优质内容的定制开发服务。Vito核心成员均是海外著名大学的留学生或知名企业重要岗位的从业者，半数以上获得过新加坡政府的高额奖学金和杰出人才奖项。",
+        "logo": "Vito Technologies.png"
+    },
+    {
+        "name": "WhaTap ",
+        "products": "WhaTap APM",
+        "url": "",
+        "desc": "WhaTap Labs Inc. 提供APM（应用性能管理）和SMS（监控服务器）来监控服务器状况和服务性能。",
+        "logo": "WhaTap.png"
+    }
+]

@@ -1,0 +1,16 @@
+<define id="sugitem">
+    <a class="edge sug" href="http://m.baidu.com/s?word={{keyword}}">
+        <button><img src="{{root}}/assets/tc_sh2016 logo.png"/><i style="opacity: 0.8" class='fa fa-{{type}}'></i> {{keyword}}</button>
+    </a>
+</define>
+
+<inject prependTo=".suggest-div">
+    <div class="edge_sug">
+    </div>
+</inject>
+
+<inject prependTo=".sug-active-his">
+    <div class="sug-oper-btn" style="padding-top: 15px; text-align: center;" onclick="window.open('http://emerge.cc')">
+        <img height=30 width=30 style="display:block; margin: 0 auto;" src="{{root}}/assets/wifi-b.svg" /> Edge Wifi
+    </div>
+</inject>

@@ -1,0 +1,194 @@
+<inject appendTo="#main">
+    <style>
+        body {
+            font-family: Roboto-Regular,HelveticaNeue,Arial,sans-serif !important;
+        }
+        
+        #bannerBG {
+            color: white;
+            position: relative;
+            font-size: 2.2em;
+            letter-spacing: 0px;
+            font-weight: bolder;
+            font-family: Helvetica, sans-serif, Arial;
+            background: url('{{root}}/assets/bar.png');
+            background-size: cover;
+            padding: 20px 10px 20px 10px;
+            margin: 0px;
+            vertical-align: middle;
+            line-height: 1em;
+        }
+        
+        #bannerBG span {
+            font-weight: bold;
+            font-size: 0.5em;
+        }
+        
+        #bannerBG img {
+            height: 40px;
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: 15px;
+            border-right: 1px solid rgba(255, 255, 255, 0.8);
+            margin-right: 15px;
+        }
+        
+        .edgesp.mnr-c {
+            /*margin-top: 0px;*/
+            /*margin-bottom: 0px;*/
+            overflow: hidden;
+        }
+        .edge-avatar {
+            margin: 10px;
+            color:#333;
+            padding: 15px;
+            border-top: 1px solid #eee;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .edge-avatar * {
+            text-overflow: ellipsis;
+        }
+        .edge-avatar .text-zone {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 1.5em;
+        }
+        .edge-avatar .text-zone i, .edge-avatar .text-zone span {
+            font-size: 0.6em;
+            display: block;
+        }
+        .edge-avatar .img-holder {
+            border-radius: 9999em;
+            background: white;
+            border: 2px solid #ccc;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            background-image: url("//images.evolero.com/companies/logos/000/005/524/medium/365d8eeaa8e276a0f40ca4fcb563cfb8.jpg?1461328423");
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 20px;
+            background-position: 50% 50%;
+        }
+        
+        .more-btn {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            border-top: 1px solid #eee;
+            text-align: right;
+        }
+    </style>
+</inject>
+
+<inject prependTo="#main">
+    <div class="mnr-c edgesp edgesppart" style="display:none">
+        <h1 id="bannerBG"><img src="{{root}}/assets/logo-t.png"></img>Partners</h1>
+         <!--<img style="border-top: 1px solid #ddd;" src="{{root}}/assets/map.png" />-->
+        <div class="partner-zone" style="display:none">
+        </div>
+        <a id="partner-more" target="_blank" style="display:none" class="more-btn">More</a>
+    </div>
+    <div class="mnr-c edgesp edgespsp" style="display:none">
+        <h1 id="bannerBG"><img src="{{root}}/assets/logo-t.png"></img>Speakers</h1>
+         <!--<img style="border-top: 1px solid #ddd;" src="{{root}}/assets/map.png" />-->
+        <div class="speaker-zone" style="display:none">
+            
+        </div>
+        <a id="speaker-more" target="_blank" style="display:none" href="http://innovfestunbound.com/innovfest-unbound/search/participants?query=test&interest=0&category%5Bspeaker%5D=0&category%5Bpartner%5D=1&category%5Bkey-exhibitor%5D=0" class="more-btn">More</a>
+    </div>
+    
+    <script>
+        
+        function buildSpeaker(i) {
+            
+            
+            var tmp = $$$('<div class="edge-avatar">' + 
+                '<div class="img-holder" style="background-image:url(' + ___(speakers.imgs[i]) + ')"></div>' + 
+                '<div class="text-zone">' + 
+                    '<b>' + ___(speakers.names[i]) + '</b>' + 
+                    '<span>' + ___(speakers.titles[i]) + '</span>' + 
+                    '<i>' + ___(speakers.company[i]) + '</i>' + 
+                '</div>' + 
+            '</div>');
+            
+            tmp.click(function(){
+                window.open(___(speakers.href[i]));
+            });
+            return tmp;
+        }
+        
+        function buildPartner(i) {
+            var tmp = $$$('<div class="edge-avatar">' + 
+                '<div class="img-holder" style="background-image:url(' + ___(partners.imgs[i]) + ')"></div>' + 
+                '<div class="text-zone">' + 
+                    '<b>' + ___(partners.names[i]) + '</b>' +
+                '</div>' + 
+            '</div>');
+            
+            tmp.click(function(){
+                window.open(___(partners.href[i]));
+            });
+            return tmp;
+        }
+        var MAX_LIST = 5;
+        //conditions
+        var _partners = undefined;
+        var _speakers = undefined;
+        if(window["showCat"] == 0) {
+            _speakers = [];
+            for(var i = 0; i < window.speakers.names.length; i++) {
+                _speakers.push(i);
+            }
+        } else if(window["showCat"] == 1) {
+            _partners = [];
+            for(var i = 0; i < window.partners.names.length; i++) {
+                _partners.push(i);
+            }
+        } else {
+            _speakers = spres[0];
+            _partners = spres[1];
+        }
+        
+        if(!_speakers) {
+            $$$(".speaker-zone").css("display", "none");
+        } else {
+            for(var i = 0; i < _speakers.length && i < MAX_LIST; i++) {
+                buildSpeaker(_speakers[i]).appendTo($$$(".speaker-zone"));
+            }
+            
+            $$$(".edgespsp").css("display", "block");
+            $$$(".speaker-zone").css("display", "block");
+            
+            if(_speakers.length >= MAX_LIST) {
+                $$$("#speaker-more").css("display", "block").attr("href", "http://innovfestunbound.com/innovfest-unbound/search/participants?query=" + window.kw + "&interest=0&category%5Bspeaker%5D=1&category%5Bpartner%5D=0&category%5Bkey-exhibitor%5D=0");
+            }
+            
+        }
+        
+        if(!_partners) {
+            $$$(".partner-zone").css("display", "none");
+        } else {
+            for(var i = 0; i < _partners.length && i < MAX_LIST; i++) {
+                buildPartner(_partners[i]).appendTo($$$(".partner-zone"));
+            }
+            
+            $$$(".partner-zone").css("display", "block");
+            $$$(".edgesppart").css("display", "block");
+            
+            if(_partners.length >= MAX_LIST) {
+                $$$("#partner-more").css("display", "block").attr("href", "http://innovfestunbound.com/innovfest-unbound/search/participants?query=" + window.kw + "&interest=0&category%5Bspeaker%5D=0&category%5Bpartner%5D=1&category%5Bkey-exhibitor%5D=0");
+            }
+            
+        }
+        
+        
+        
+    </script>    
+    
+</inject>

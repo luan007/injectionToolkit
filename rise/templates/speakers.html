@@ -1,0 +1,59 @@
+
+
+<inject prependTo="#main">
+    <div class="mnr-c edgesp" style="display:none" id="speakers">
+        <h1 id="bannerBG"><img src="{{root}}/assets/logo-t.png"></img>Speakers</h1>
+        <div id="speaker_container">
+        </div>
+        <a target="_blank" style="display:none" class="speaker-more more-btn">More</a>
+    </div>
+
+    <script>
+        (function(){
+            var $ = $$$;
+            var present = [];
+            if(googleutil.regexKW(/speaker/i)) {
+                present = $$$edgeData$$$.speakers.people;
+            } else {
+                var kw = googleutil.getKW().toLowerCase();
+                for(var i = 0; i < $$$edgeData$$$.speakers.people.length; i++) {
+                    var cur = $$$edgeData$$$.speakers.people[i];
+                    if(cur.full_name.toLowerCase().indexOf(kw) >= 0 ||
+                    cur.company_name.toLowerCase().indexOf(kw) >= 0) {
+                        present.push($$$edgeData$$$.speakers.people[i]);
+                    }
+                }
+            }
+            if(present.length > 0) {
+                var origin = present.length;
+                present.length = present.length > 5 ? 5 : present.length;
+                if(origin > present.length) {
+                    $(".speaker-more").css("display", "block").text("More (" + (origin - present.length) + ")");
+                }
+                var container = $("#speaker_container");
+                for(var i = 0; i < present.length; i++) {
+                    var j = $$$template("speaker", present[i]);
+                    var cont = j.find(".timeslotholder");
+                    
+                    for(var q = 0; q < $$$edgeData$$$.timeslots.length; q++) {
+                        var d = $$$edgeData$$$.timeslots[q];
+                        for(var t in d.speakers) {
+                            if(d.speakers[t].name.toLowerCase().trim() == present[i].full_name.toLowerCase().trim()) {
+                                $$$template("timeslot_slim", {
+                                    title: d.title,
+                                    time: d.start_time.split(" ")[1].substring(0, 5) + " - " + d.end_time.split(" ")[1].substring(0, 5), 
+                                    location: d.location.name,
+                                    date: d.start_time.split(" ")[0].substring(5)
+                                }).appendTo(cont);
+                                break;
+                            }
+                        } 
+                    }
+                    
+                    j.appendTo(container);
+                }
+                $("#speakers").css("display", "block");
+            }
+        })();
+    </script>
+</inject>

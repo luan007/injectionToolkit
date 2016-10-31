@@ -1,0 +1,373 @@
+[
+    {
+        "date": "27",
+        "start_time": "8:30",
+        "end_time": "9:30",
+        "name": "签到(第一日)",
+        "speakers": ""
+    },
+    {
+        "date": "27",
+        "start_time": "9:30",
+        "end_time": "9:35",
+        "name": "开幕词",
+        "speakers": "卢刚博士"
+    },
+    {
+        "date": "27",
+        "start_time": "9:35",
+        "end_time": "10:00",
+        "name": "对话：打造全球的中国品牌",
+        "speakers": "曾学忠,卢刚博士"
+    },
+    {
+        "date": "27",
+        "start_time": "10:00",
+        "end_time": "10:20",
+        "name": "主题演讲：中国搜索市场的机会",
+        "speakers": "茹立云"
+    },
+    {
+        "date": "27",
+        "start_time": "10:20",
+        "end_time": "10:45",
+        "name": "对话：Uber的中国战略",
+        "speakers": "汪莹"
+    },
+    {
+        "date": "27",
+        "start_time": "10:45",
+        "end_time": "11:15",
+        "name": "对话：无人机，其实不仅仅是航拍",
+        "speakers": "王孟秋,彭斌"
+    },
+    {
+        "date": "27",
+        "start_time": "11:15",
+        "end_time": "11:45",
+        "name": "专家论坛：车联网背后的大数据",
+        "speakers": "Markus Seidel,Bevin Jacob,谷彩琳 Céline Le Cotonnec,Bill Russo"
+    },
+    {
+        "date": "27",
+        "start_time": "11:45",
+        "end_time": "12:10",
+        "name": "对话：文创生态-消费升级的体验",
+        "speakers": "陈伟泓"
+    },
+    {
+        "date": "27",
+        "start_time": "12:10",
+        "end_time": "12:30",
+        "name": "主题演讲：深圳：硬件硅谷",
+        "speakers": "Benjamin Joffe"
+    },
+    {
+        "date": "27",
+        "start_time": "12:30",
+        "end_time": "13:00",
+        "name": "午餐",
+        "speakers": ""
+    },
+    {
+        "date": "27",
+        "start_time": "13:00",
+        "end_time": "13:30",
+        "name": "专家论坛：互联网大鳄们的投资观",
+        "speakers": "陈明峰,方益民,陈宏伟"
+    },
+    {
+        "date": "27",
+        "start_time": "13:30",
+        "end_time": "13:55",
+        "name": "对话：微信之外的朋友圈",
+        "speakers": "栗浩洋,卢刚博士"
+    },
+    {
+        "date": "27",
+        "start_time": "13:55",
+        "end_time": "14:25",
+        "name": "专家论坛：老外在中国的创业故事",
+        "speakers": "William Bao Bean,Justin Mallen,Lucas Englehardt"
+    },
+    {
+        "date": "27",
+        "start_time": "14:25",
+        "end_time": "14:55",
+        "name": "专家论坛：全球视野的中国帮",
+        "speakers": "阳陆育,王佳梁"
+    },
+    {
+        "date": "27",
+        "start_time": "14:55",
+        "end_time": "15:25",
+        "name": "专家论坛：未来，你将如何旅行？",
+        "speakers": "张平合,吴伟,陈俊"
+    },
+    {
+        "date": "27",
+        "start_time": "15:25",
+        "end_time": "15:55",
+        "name": "专家论坛：大体育+ 路漫漫其修远",
+        "speakers": "陈元,范殷良,黄贤俊"
+    },
+    {
+        "date": "27",
+        "start_time": "15:55",
+        "end_time": "16:25",
+        "name": "专家论坛：比特币和区块链",
+        "speakers": "Bobby Lee,Zennon Kapron"
+    },
+    {
+        "date": "27",
+        "start_time": "16:25",
+        "end_time": "16:55",
+        "name": "专家论坛：网红平台-粉丝经济是创新还是泡沫",
+        "speakers": "何一,李檬"
+    },
+    {
+        "date": "27",
+        "start_time": "16:55",
+        "end_time": "17:20",
+        "name": "对话：大数据驱动国际物流",
+        "speakers": "Ryan Petersen,Megan Rose Dickey"
+    },
+    {
+        "date": "27",
+        "start_time": "18:30",
+        "end_time": "21:00",
+        "name": "VIP 酒会 (仅限邀请嘉宾)",
+        "speakers": ""
+    },
+    {
+        "date": "28",
+        "start_time": "8:30",
+        "end_time": "9:30",
+        "name": "签到(第二日)",
+        "speakers": ""
+    },
+    {
+        "date": "28",
+        "start_time": "9:30",
+        "end_time": "9:50",
+        "name": "主题演讲：中国特色的共享经济",
+        "speakers": "阎岩"
+    },
+    {
+        "date": "28",
+        "start_time": "9:50",
+        "end_time": "10:20",
+        "name": "对话：WeWork 在中国",
+        "speakers": "Ole Ruch"
+    },
+    {
+        "date": "28",
+        "start_time": "10:20",
+        "end_time": "10:50",
+        "name": "对话：颠覆创新-当旅游行业遇上人工智能",
+        "speakers": "张帆"
+    },
+    {
+        "date": "28",
+        "start_time": "10:50",
+        "end_time": "11:20",
+        "name": "对话: 广播的未来",
+        "speakers": "王海滨,卢刚博士"
+    },
+    {
+        "date": "28",
+        "start_time": "11:20",
+        "end_time": "11:50",
+        "name": "对话: 社会电商国际化之路",
+        "speakers": "魏一搏"
+    },
+    {
+        "date": "28",
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "name": "午餐",
+        "speakers": ""
+    },
+    {
+        "date": "28",
+        "start_time": "13:00",
+        "end_time": "13:25",
+        "name": "对话：“创新国度”以色列眼中的中国创新",
+        "speakers": "高哲铭 Amir Gal-Or"
+    },
+    {
+        "date": "28",
+        "start_time": "13:25",
+        "end_time": "13:55",
+        "name": "专家论坛：中国的互联网金融市场",
+        "speakers": "胡丹,毛丞宇,薛肖麒"
+    },
+    {
+        "date": "28",
+        "start_time": "13:55",
+        "end_time": "14:20",
+        "name": "对话：在线教育引领的知识共享革命",
+        "speakers": "黄舒骏,卢刚博士"
+    },
+    {
+        "date": "28",
+        "start_time": "14:20",
+        "end_time": "14:50",
+        "name": "专家论坛：不知道的亿级市场",
+        "speakers": "赵鸿,孙满弟"
+    },
+    {
+        "date": "28",
+        "start_time": "14:50",
+        "end_time": "15:15",
+        "name": "对话：无人机的未来机遇",
+        "speakers": "Adam Najberg,Matt Burns"
+    },
+    {
+        "date": "28",
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "name": "专家论坛：女性投资人新势力-越性感越理性",
+        "speakers": "顾旻曼,张晓婷,郑兰"
+    },
+    {
+        "date": "28",
+        "start_time": "15:45",
+        "end_time": "16:10",
+        "name": "对话：智能物件的社交网络",
+        "speakers": "潘昊,卢刚博士"
+    },
+    {
+        "date": "28",
+        "start_time": "16:10",
+        "end_time": "16:40",
+        "name": "专家论坛：房+",
+        "speakers": "韩彦,段毅"
+    },
+    {
+        "date": "28",
+        "start_time": "16:40",
+        "end_time": "17:10",
+        "name": "专家论坛：家用机器人离我们还有多远?",
+        "speakers": "Natsuo Akazawa,孔华威,叶琛"
+    },
+    {
+        "date": "29",
+        "start_time": "8:30",
+        "end_time": "9:30",
+        "name": "签到(第三日)",
+        "speakers": ""
+    },
+    {
+        "date": "29",
+        "start_time": "9:30",
+        "end_time": "9:50",
+        "name": "主题演讲：VR技术，初创企业和资本的三重连奏曲",
+        "speakers": "Brian Koo"
+    },
+    {
+        "date": "29",
+        "start_time": "9:50",
+        "end_time": "10:15",
+        "name": "对话：现场直播新玩法",
+        "speakers": "David Cole"
+    },
+    {
+        "date": "29",
+        "start_time": "10:15",
+        "end_time": "10:45",
+        "name": "专家论坛：从被动到互动——VR重塑娱乐业",
+        "speakers": "Yongseok Jang,Blake Freeman"
+    },
+    {
+        "date": "29",
+        "start_time": "10:45",
+        "end_time": "11:10",
+        "name": "对话：VR内容生态圈",
+        "speakers": "李岱"
+    },
+    {
+        "date": "29",
+        "start_time": "11:10",
+        "end_time": "11:30",
+        "name": "主题演讲：VR/AR的革命",
+        "speakers": "Yossi Vardi"
+    },
+    {
+        "date": "29",
+        "start_time": "11:30",
+        "end_time": "11:55",
+        "name": "对话：电子竞技",
+        "speakers": "Justin Cooney,Chi Jayson"
+    },
+    {
+        "date": "29",
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "name": "午餐",
+        "speakers": ""
+    },
+    {
+        "date": "29",
+        "start_time": "13:00",
+        "end_time": "13:25",
+        "name": "对话：移动VR",
+        "speakers": "黄晓杰,卢刚博士"
+    },
+    {
+        "date": "29",
+        "start_time": "13:25",
+        "end_time": "13:45",
+        "name": "主题演讲：如何使VR强于WEB",
+        "speakers": "Mark Pesce"
+    },
+    {
+        "date": "29",
+        "start_time": "13:45",
+        "end_time": "14:15",
+        "name": "专家论坛：VR投资如火如荼！创业投资寒风凛冽？",
+        "speakers": "符国新,Edith Yeung,王康曼"
+    },
+    {
+        "date": "29",
+        "start_time": "14:15",
+        "end_time": "14:35",
+        "name": "主题演讲：颠覆性科技推动VR电影",
+        "speakers": "Eugene Chung"
+    },
+    {
+        "date": "29",
+        "start_time": "14:35",
+        "end_time": "15:05",
+        "name": "专家论坛：初生牛犊不怕虎-顶级中国VR/AR初创企业",
+        "speakers": "张宏,黄通兵,廖春元"
+    },
+    {
+        "date": "29",
+        "start_time": "15:05",
+        "end_time": "15:30",
+        "name": "对话：中国在全球VR产业中的角色",
+        "speakers": "汪丛青,卢刚博士"
+    },
+    {
+        "date": "29",
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "name": "专家论坛：3D内外：半导体至VR",
+        "speakers": "卢超群 博士 Dr. Nicky Lu,Nathan Li"
+    },
+    {
+        "date": "29",
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "name": "专家论坛：我们为什么进军VR领域？",
+        "speakers": "Chester Jung Seok Roh,陈金尧,Eloi Gerard"
+    },
+    {
+        "date": "29",
+        "start_time": "19:00",
+        "end_time": "12:00",
+        "name": "XFounder Afterparty 创始人之夜",
+        "speakers": ""
+    }
+]

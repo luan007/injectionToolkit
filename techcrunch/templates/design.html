@@ -1,0 +1,537 @@
+<mod addClass="onlyshow">#page</mod>
+<mod addClass="skin-light">#page-hd</mod>
+
+
+<define id="user_detail">
+    <div class="edge block detail user_splash" style="display: block;">
+        <div class="edge avatar_item table">
+            <div>
+                <div class='img' style="background-color: #ccc; background-image: url('{{root}}/assets/speakers/{{name}}.jpg')"></div>
+            </div>
+            <div class="txt">
+                <b>{{name}}</b>
+                <div class="title">{{title}}</div>
+            </div>
+        </div>
+        <div class='userdesc'>
+            {{desc}}
+        </div>
+    </div>
+</define>
+
+<define id="speaker_emb">
+    <div class="edge avatar_item table embed" onclick="location.href='http://m.baidu.com/s?word={{name}}'">
+        <div>
+            <div class='img' style="background-color: #ccc; background-image: url('{{root}}/assets/speakers/{{name}}.jpg')"></div>
+        </div>
+        <div class="txt">
+            <b>{{name}}</b>
+            <div class="title">{{title}}</div>
+        </div>
+    </div>
+</define>
+
+<define id="schedule_detail">
+    <div class="edge block detail schu" style="display:block">
+        <div class="edge table">
+            <div class="date">
+                {{date}}
+            </div>
+            <div class="title">{{time}}</div>
+        </div>
+        <div class="txt">
+            <b>{{title}}</b>
+        </div>
+        <div class="sch_speakers">
+
+        </div>
+    </div>
+
+</define>
+
+<define id="investor_detail">
+    <div class="edge block detail investor_d">
+        <div class='imgcontainer'>
+            <img src="{{root}}/assets/Investors/{{stripped}}.png" />
+        </div>
+        <div class="txt">
+            <b>{{name}}</b>
+        </div>
+        <div class="moretxt">{{desc}}</div>
+        <a class="bigBtn bottom" href="{{url}}" target="_blank">
+            <i class='fa fa-hand-pointer-o'></i> 访问网站
+        </a>
+    </div>
+</define>
+
+<define id="proj_prod_emb">
+    <div class="edge table prod embed">
+        <div class="txt">
+            <i class='fa fa-tag'></i> <b>{{name}}</b>
+        </div>
+    </div>
+</define>
+
+<define id="proj_detail">
+    <div class="edge block detail project">
+        <div class='imgcontainer'>
+            <img src="{{root}}/assets/company/{{name}}.png" />
+        </div>
+        <div class="txt">
+            <b>{{name}}</b>
+        </div>
+        <div class="edge_proj_cont">
+
+        </div>
+        <div class="moretxt">
+            {{desc}}
+        </div>
+        <a class="bigBtn bottom" href="{{url}}">
+            <i class='fa fa-hand-pointer-o'></i> 官方网站
+        </a>
+    </div>
+</define>
+
+
+<define id="user_item">
+    <div class="edge avatar_item table" onclick="location.href='http://m.baidu.com/s?word={{name}}'">
+        <div>
+            <div class='img' style="background-image: url('{{root}}/assets/speakers/{{name}}.jpg')"></div>
+        </div>
+        <div class="txt">
+            <b>{{name}}</b>
+            <div class="title">{{title}}</div>
+        </div>
+    </div>
+</define>
+
+<define id="sch_item">
+    <div onclick="location.href='http://m.baidu.com/s?word={{name}}'" data-date="{{date}}" data-start="{{start}}" data-end="{{end}}"
+        class="edge table schedule_item">
+        <div class='time'>{{start_time}} - {{end_time}}</div>
+        <div class="txt">
+            <b>{{name}} <span class="tag">进行中</span></b>
+            <div>{{speakers}}</div>
+        </div>
+    </div>
+</define>
+
+<define id="tag">
+    <div class='tag norm'>{{name}}</div>
+</define>
+
+<define id="company_item">
+    <div class="edge table proj" onclick="location.href='http://m.baidu.com/s?word={{name}}'">
+        <div>
+            <div class='img' style="background-image: url('{{root}}/assets/company/{{name}}.png')"></div>
+        </div>
+        <div class="txt">
+            <b>{{name}}</b>
+            <div class='tags'>
+                <!--inject second time!-->
+            </div>
+        </div>
+    </div>
+</define>
+
+<define id="investor_item">
+    <div class="edge table investor_item" data-days="{{time}}" onclick="location.href='http://m.baidu.com/s?word={{name}}'">
+        <div class='name'>{{name}}</div>
+        <div class="txt">
+            <b>{{tags}}</b>
+        </div>
+    </div>
+</define>
+
+
+<inject prependTo="head">
+    <link rel="stylesheet" href="{{root}}/assets/stylesheet.css">
+</inject>
+<inject prependTo="body">
+    <link rel="stylesheet" href="{{root}}/templates/common.css">
+    <link rel="stylesheet" href="{{root}}/templates/index.css">
+</inject>
+
+<inject prependTo=".results">
+    <div class="result edge-card">
+        <div class="container edge-container">
+            <div class="edge-cardbg"></div>
+            <div class="edge-card-header">
+                <b style="float:left; font-size:12px;">SEE THE FUTURE<br>看见未来</b>
+                <img style="float: right;" class='brandlogo' src="{{root}}/assets/tclogos.svg" />
+                <div style="height: 35px; background: black; visibility: hidden"></div>
+            </div>
+        </div>
+        <div class="edge content">
+
+            <div id="user_list" class="please_count edge block">
+                <div class="edge title"><span><i class='fa fa-street-view'></i> 演讲者 </span> <b class="count">35</b> </div>
+                <div class="collapsable collapse">
+                    <div class="edge contentblock">
+                        <!--injector-->
+                    </div>
+                </div>
+            </div>
+
+            <div id="schedule_list" class="edge block please_count">
+                <div class="edge title"><span><i class='fa fa-calendar'></i> 日程 </span><b class="count">35</b> </div>
+                <div class="collapsable collapse">
+                    <div class="edge schedule_header">
+                        <div class="table-tab">
+                            <div class="sch_tab tab_item hidden day_27" data-day="27">
+                                <div>周一</div>
+                                <div>27</div>
+                                <div class="counter">5</div>
+                            </div>
+                            <div class="sch_tab tab_item hidden day_28" data-day="28">
+                                <div>周二</div>
+                                <div>28</div>
+                                <div class="counter">55</div>
+                            </div>
+                            <div class="sch_tab tab_item hidden day_29" data-day="29">
+                                <div>周三</div>
+                                <div>29</div>
+                                <div class="counter">29</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edge schedule contentblock hideborder">
+                        <!--injection-->
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="company_list" class="edge block please_count">
+                <div class="edge title"><span><i class='fa fa-rocket'></i> 项目 </span><b class="count">35</b> </div>
+                <div class="collapsable collapse">
+                    <div class="edge contentblock">
+                        <!--inject-->
+                    </div>
+                </div>
+            </div>
+
+            <div id="investor_list" class="edge block please_count">
+                <div class="edge title"><span><i class='fa fa-star'></i> 十分之约 </span><b class="count">35</b> </div>
+                <div class="collapsable collapse">
+                    <div class="edge schedule_header">
+                        <div class="tab float">
+                            六月, 2016
+                        </div>
+                        <div class="table-tab">
+                            <div class="investors tab_item hidden day_27" data-day="27">
+                                <div>周一</div>
+                                <div>27</div>
+                                <div class="icounter"></div>
+                                
+                            </div>
+                            <div class="investors tab_item hidden day_28" data-day="28">
+                                <div>周二</div>
+                                <div>28</div>
+                                <div class="icounter"></div>
+                                
+                            </div> 
+                            <div class="investors tab_item hidden day_29" data-day="29">
+                                <div>周三</div>
+                                <div>29</div>
+                                <div class="icounter"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edge investor_lst contentblock hideborder">
+                        <!--injection-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var container = $$$(".edge.content");
+
+        function findSpeaker(name) {
+            for(var i in $$$edgeData$$$.speaker) {
+                if($$$edgeData$$$.speaker[i].name == name) 
+                return $$$edgeData$$$.speaker[i];
+            }
+        }
+
+        function renderSpeaker_hero(s) {
+            $$$template("user_detail", {desc: s.desc, name: s.name, title: s.title}).prependTo(container);
+        }
+
+        function renderCompany_hero(s) {
+             var elem = $$$template("proj_detail", {desc: s.desc, name: s.name, url: s.url}).prependTo(container);
+             if(e.obj.products.length > 0) {
+                var cont2 = elem.find(".edge_proj_cont");
+                  var arr = e.obj.products.split(",");
+                  while(arr.length > 0) {
+                    $$$template("proj_prod_emb", {name : arr.pop().replace(/"/g, "")}).appendTo(cont2);
+                  }
+               }
+        }
+
+        function renderInvestor_hero(s) {
+            $$$template("investor_detail", {desc: e.obj.desc, name: e.obj.name, url: e.obj.url, stripped: e.obj.name.replace(/ /g, "")}).prependTo(container);
+        }
+
+        function renderSchedule_hero(s) {
+             var elem = $$$template("schedule_detail", {date: e.obj.date + " / " + dayMap[e.obj.date], time: e.obj.start_time + " - " + e.obj.end_time, title: e.obj.name}).prependTo(container);
+             if(e.obj.speakers.length > 0) {
+                        var cont2 = elem.find(".sch_speakers");
+                        var arr = e.obj.speakers.split(",");
+                        while(arr.length > 0) {
+                            var sp = arr.pop();
+                            sp = findSpeaker(sp);
+                            if(!sp) continue;
+                            $$$template("speaker_emb", {desc: sp.desc, name: sp.name, title: sp.title}).appendTo(cont2);
+                  }
+               }
+        }
+
+        var normMap = {
+            search: function(){},
+            speaker: function(s) {
+                //find injection zone
+                var target = $('#user_list .contentblock');
+                $$$template("user_item", s).appendTo(target);
+            },
+            schedule: function(s) {
+                // console.log(s);
+                var target = $('#schedule_list .contentblock');
+                $$$template("sch_item", s).appendTo(target);
+            },
+            investor: function(s) {
+                var target = $("#investor_list .contentblock");
+                s.name = s.name.replace(/ /g, " ");
+                $$$template("investor_item", s).appendTo(target);
+            },
+            company: function(s) {
+                var target =$("#company_list .contentblock");
+                var elem = $$$template("company_item", s).appendTo(target);
+                if(s.products.trim().length > 0) {
+                    var target2 = elem.find(".tags");
+                    var p = s.products.replace(/"/g, "").split(",");
+                    for(var i = 0 ; i < p.length; i++) 
+                    {
+                        $$$template("tag", { name: p[i] }).appendTo(target2);
+                    }
+                }
+            }
+        };
+
+        var dayMap = {
+            "27": "星期一",
+            "28": "星期二",
+            "29": "星期三",
+        };
+
+        var heroMap = {
+            company: renderCompany_hero,
+            schedule: renderSchedule_hero,
+            investor: renderInvestor_hero,
+            speaker: renderSpeaker_hero  
+        };
+
+        var heros = [];
+        var norms = [];
+
+        if(window.gresult.length <= 2 && window.gresult.length) {
+            for(var g = 0; g < window.gresult.length; g++){
+                var e = window.gresult[g];
+                switch(window.gresult[g].key) {
+                    case "speaker":
+                        //get schedule
+                        heros.push(e);
+                        // renderSpeaker_hero(e.obj);
+                        //find all relative schedules
+                        for(var i = 0; i < $$$edgeData$$$.schedule.length; i++) {
+                            if($$$edgeData$$$.schedule[i].speakers.indexOf(e.obj.name) >= 0) {
+                                norms.push( {
+                                    key: "schedule",
+                                    score: 100,
+                                    obj: $$$edgeData$$$.schedule[i]
+                                } )
+                            }
+                        }
+                    break;
+                    case "investor":
+                        heros.push(e);
+                        norms.push(e);
+                        // renderInvestor_hero(e.obj);
+                        //add 十分之约
+                    break;
+                    case "schedule":
+                        heros.push(e);
+                        // renderSchedule_hero(e.obj);
+                    break;
+                    case "company":
+                        heros.push(e);
+                        // renderCompany_hero(e.obj);
+                    break;
+                }
+            }
+        } else {
+            //see fresults
+        }
+
+        if(window.gresult.length == 0) {
+            for(var i = 0; i < window.fresult.length; i++) {
+                norms.push(window.fresult[i]);
+            }
+        } else if(window.gresult.length > 2) {
+            for(var i = 0; i < window.gresult.length; i++) {
+                norms.push(window.gresult[i]);
+            }
+        }
+
+        heros = dedup(heros);
+        for(var i in heros) {
+            heroMap[heros[i].key](heros[i].obj);
+        }
+        norms = dedup(norms);
+        var sches = [];
+        var invs = {};
+
+        for(i = norms.length - 1; i>=0;i--) {
+            //deal with schedule in a different way
+            if(norms[i].key == "schedule") {
+                sches.push(norms[i]);
+            } else {
+                normMap[norms[i].key](norms[i].obj);
+                if(norms[i].key == "investor") {
+                    var j = norms[i].obj.time.split(",");
+                    for(var q in j) {
+                        if(!invs[j[q]]) invs[j[q]] = 0;
+                        invs[j[q]]++;
+                    }
+                }
+            }
+            //deal with tabs
+        }
+        // console.log(invs);
+        sches = sches.sort(function(a, b) {
+            return a.obj.start - b.obj.start;
+        });
+
+        var sch_available = {};
+        for(var i in sches) {
+            // console.log("schedule - " + i);
+            if(!sch_available[sches[i].obj.date]) {
+                sch_available[sches[i].obj.date] = 0;
+            }
+            sch_available[sches[i].obj.date] += 1;
+            normMap[sches[i].key](sches[i].obj);
+        }
+
+
+        function updateSelection_sch() {
+            var sel = $$$(".sch_tab.selected");
+            if(sel.length == 0) return;
+            var d = sel.data("day");
+            var all = $$$(".schedule_item");
+            for(var i = 0; i < all.length; i++) {
+                if($$$(all[i]).data("date") != d) {
+                    $$$(all[i]).css("display", "none");
+                } else {
+                    $$$(all[i]).css("display", "block");
+                }
+            }
+        }
+
+        function updateSchAvail() {
+            var all = $$$(".schedule_item");
+            var time = new Date().getTime();
+            for(var i = 0; i < all.length; i++) {
+                if($$$(all[i]).data("end") < time) {
+                    $$$(all[i]).removeClass("active");
+                    $$$(all[i]).addClass("disabled");
+                } else if($$$(all[i]).data("start") < time) {
+                    $$$(all[i]).addClass("active");
+                    $$$(all[i]).removeClass("disabled");
+                } else {
+                    $$$(all[i]).removeClass("active");
+                    $$$(all[i]).removeClass("disabled");
+                }
+            }
+        }
+        setInterval(updateSchAvail, 3000);
+
+        var s = 0;
+        for(var i in sch_available)
+        {
+            $$$(".sch_tab.day_" + i).removeClass("hidden");
+            $$$(".sch_tab.day_" + i + " .counter").text(sch_available[i]);
+            if(s == 0) {
+                $$$(".sch_tab.day_" + i).addClass("selected");
+            }
+            s = 1;
+        }
+        updateSelection_sch();
+
+
+
+
+        s = 0;
+        
+        for(var i in invs)
+        {
+            console.log(i);
+            $$$(".investors.day_" + i).removeClass("hidden");
+            $$$(".investors.day_" + i + " .icounter").text(invs[i]);
+            if(s == 0) {
+                $$$(".investors.day_" + i).addClass("selected");
+            }
+            s = 1;
+        }
+
+        function updateSelection_inv() {
+            var sel = $$$(".investors.selected");
+            if(sel.length == 0) return;
+            var d = sel.data("day");
+            var all = $$$(".investor_item");
+            for(var i = 0; i < all.length; i++) {
+                if($$$(all[i]).data("days").toString().indexOf(d) < 0) {
+                    $$$(all[i]).css("display", "none");
+                } else {
+                    $$$(all[i]).css("display", "block");
+                }
+            }
+        }
+
+        updateSelection_inv();
+
+
+        $$$(".investors.tab_item").click(function(){
+            $$$(".investors.tab_item").removeClass("selected");
+            $$$(this).addClass("selected");
+            updateSelection_inv();
+        });
+
+
+        $$$(".sch_tab").click(function(){
+            $$$(".sch_tab").removeClass("selected");
+            $$$(this).addClass("selected");
+            updateSelection_sch();
+        });
+
+        updateSchAvail();
+
+
+        $$$(".edge.title").click(function(){
+            $$$(this).parent().toggleClass("show");
+        });
+
+        var elems = $$$(".please_count");
+        for(var i = 0; i < elems.length; i++) {
+            var d = $$$($$$($$$(elems[i]).find(".contentblock")[0])[0]).children().length;
+            $$$(elems[i]).find(".count").text(d);
+            if(d > 0) {
+                $$$(elems[i]).css("display", "block");
+            } else {
+                $$$(elems[i]).css("display", "none");
+            }
+        }
+    </script>
+</inject>

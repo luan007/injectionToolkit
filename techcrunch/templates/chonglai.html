@@ -1,0 +1,30 @@
+<mod addClass="onlyshow">#page</mod>
+<mod addClass="skin-light">#page-hd</mod>
+<inject prependTo="head">
+    <link rel="stylesheet" href="{{root}}/assets/stylesheet.css">
+</inject>
+<inject prependTo="body">
+    <link rel="stylesheet" href="{{root}}/templates/common.css">
+    <link rel="stylesheet" href="{{root}}/templates/index.css">
+</inject>
+
+<inject prependTo="#results">
+    <div class="result edge-card">
+        <div class="container">
+            <div class="edge-cardbg"></div>
+            <div class="edge-card-header">
+                <b style="float:left; font-size:12px;">SEE THE FUTURE<br>看见未来</b>
+                <img style="float: right;" class='brandlogo' src="{{root}}/assets/tclogos.svg" />
+                <div style="height: 35px; background: black; visibility: hidden"></div>
+            </div>
+        </div>
+        <div class="edge content">
+
+            <div class="edge splitter">
+                <div class="edge tab">日程</div>
+            </div>
+
+
+        </div>
+    </div>
+</inject>

@@ -1,0 +1,40 @@
+<inject prependTo="#main">
+    
+    <div class="mnr-c edgesp" style="display:none" id="attendees">
+        <h1 id="bannerBG"><img src="{{root}}/assets/logo-t.png"></img>Attendees</h1>
+        <div id="attendee_container">
+        </div>
+        <a target="_blank" style="display:none" class="attendee-more more-btn">More</a>
+    </div>
+
+    <script>
+        (function(){
+            var $ = $$$;
+            var present = [];
+            if(googleutil.regexKW(/attend/i)) {
+                present = $$$edgeData$$$.attendees.attendees;
+            } else {
+                var kw = googleutil.getKW().toLowerCase();
+                for(var i = 0; i < $$$edgeData$$$.attendees.attendees.length; i++) {
+                    var cur = $$$edgeData$$$.attendees.attendees[i];
+                    if(cur.name && cur.name.toLowerCase().indexOf(kw) >= 0 ||
+                    cur.company && cur.company.toLowerCase().indexOf(kw) >= 0) {
+                        present.push($$$edgeData$$$.attendees.attendees[i]);
+                    }
+                }
+            }
+            if(present.length > 0) {
+                var origin = present.length;
+                present.length = present.length > 5 ? 5 : present.length;
+                if(origin > present.length) {
+                    $(".attendee-more").css("display", "block").text("More (" + (origin - present.length) + ")");
+                }
+                var container = $("#attendee_container");
+                for(var i = 0; i < present.length; i++) {
+                    $$$template("attendee", present[i]).appendTo(container);
+                }
+                $("#attendees").css("display", "block");
+            }
+        })();
+    </script>
+</inject>

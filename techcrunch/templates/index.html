@@ -1,0 +1,153 @@
+<inject prependTo="head">
+    <link rel="stylesheet" href="{{root}}/assets/stylesheet.css">
+</inject>
+<remove>#navs</remove>
+<inject prependTo="body">
+    <link rel="stylesheet" href="{{root}}/templates/common.css">
+    <link rel="stylesheet" href="{{root}}/templates/index.css">
+
+    <div class="qrcode closed">
+        <img src="{{root}}/assets/qr.jpg"/>
+        <div class='txt'>
+            更多资讯<br>请关注Techcrunch官方微信
+        </div>
+        <div onclick="$$$('.qrcode').addClass('closed')" class="close"><i class='fa fa-close'></i></div>
+    </div>
+</inject>
+<remove>#userinfo-wrap,#skin,#logo,#plus-card,#admin</remove>
+<inject prependTo='#page'>
+    <div id="pattern"></div>
+    <div id="particles"></div>
+</inject>
+
+
+<define id="sch_index">
+    <div data-date="{{date}}" data-start='{{start}}' ' data-end='{{end}} ' onclick="location.href='http://m.baidu.com/s?word={{name}} '">
+        <b class="time">{{start_time}} - {{end_time}}</b> <span class="tag">正在进行</span>
+        <div style="height:10px;"></div>
+        <b class="chat">{{name}}</b> <br>
+        <span class="misc">{{speakers}}</span>
+    </div>
+</define>
+
+
+<insert insertBefore="#header">
+    <div id="atTop">
+        <img id="tclogo" src='{{root}}/assets/tc_sh2016 logo.svg ' />
+        <div id="edge_date">
+            <div id="edge_m"></div>
+            <div id="edge_d"></div>
+            <script>
+                $$$("#edge_m").text((new Date().getMonth() + 1) + '月 ');
+                $$$("#edge_d").text(new Date().getDate());
+                _try = setInterval(function(){
+                    if(document.getElementsByClassName("weather-outline")) {
+                        var t = $$$(".weather-outline")
+                        t.remove().appendTo("#edge_date").addClass("show");
+                        clearTimeout(_try);
+                    }
+                }, 500);
+            </script>
+        </div>
+    </div>
+    <h1 id="toui">SEE THE FUTURE <br> 看见未来</h1>
+    <div id="edge-sch-container">
+        <div id="edge-sch">
+            <!--injection zx-->
+        </div>
+        <div class="shadow-bottom"></div>
+        <script>
+
+            //append EVERYTHING
+            var t = document.getElementById("edge-sch");
+            var all = [];
+            for(var i = 0; i < $$$edgeData$$$.schedule.length; i++) {
+                all.push($$$template("sch_index", $$$edgeData$$$.schedule[i]).appendTo(t));
+            }
+
+            function update() {
+                var now = new Date();
+                var t = now.getTime();
+                var mindate = 0;
+                for(var i = 0; i < $$$edgeData$$$.schedule.length; i++) {
+                    var sch = $$$edgeData$$$.schedule[i];
+                    if(mindate > 0 && mindate !== parseInt(sch.date)) {
+                        all[i].css("display", "none");
+                        continue;
+                    }
+                    //only show stuff in da future
+                    if(sch.end < t) {
+                        //done.
+                        all[i].css("display", "none");
+                    }
+                    else if(sch.start < t) {
+                        all[i].css("display", "block");
+                        all[i].find(".tag").css("visibility", "visible");
+                        if(mindate == 0) {
+                            mindate = parseInt(sch.date);
+                        }
+                    } else {
+                        all[i].css("display", "block");
+                        all[i].find(".tag").css("visibility", "collapse");
+                        
+                        if(mindate == 0) {
+                            mindate = parseInt(sch.date);
+                        }
+                    }
+                }
+                check();
+            }
+
+            update();
+
+            function check() {
+                if(t.offsetHeight + t.scrollTop > t.scrollHeight - 50) {
+                    $$$(".shadow-bottom").addClass("hidden");
+                } else {
+                    $$$(".shadow-bottom").removeClass("hidden");
+                }
+            }
+            $$$("#edge-sch").scroll(check);
+
+            
+
+            $$$(document).load(function(){
+                update();
+            });
+
+            setInterval(update, 3000);
+        </script>
+    </div>
+    <!--
+    <div id="edge-spanner">
+    </div>-->
+</insert>
+<insert insertAfter="#header">
+    <ul id="edge-nav">
+        <li>
+            <a href="http://m.baidu.com/s?word=议程"><i class='fa fa-calendar '></i>
+                <span>议程</span>
+            </a>
+        </li>
+        <li>
+            <a href="http://m.baidu.com/s?word=场景搜索"><i class='fa fa-rocket '></i>
+                <span>场景搜索</span>
+            </a>
+        </li>
+        <li>
+            <a href="http://cn.technode.com/" target="_blank"><i class='fa fa-newspaper-o '></i>
+                <span>动点新闻</span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" onclick="$$$('.qrcode').removeClass('closed')">
+                <div></div>
+                <span>官方微信</span>
+            </a>
+        </li>
+    </ul>
+
+    <a class="about" href="http://emerge.cc" target="_blank">
+        <img src="{{root}}/assets/wifi.svg" height="20" width="20" /> 了解下一代场景化WiFi科技
+    </a>
+</insert>
