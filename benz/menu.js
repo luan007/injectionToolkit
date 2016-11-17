@@ -86,11 +86,8 @@ window.$$$wrap$$$ = function () {
     ];
 
     edge.deploy(projroot, res, function () {
-        function showMenu() {
-            // window.open("http://wifi.lan/", "_blank");
-            try{
-                $(".edgead").get()[0].webkitRequestFullscreen();
-            }catch(e){}
+
+
              $.get("http://192.168.123.1:2561/mac", function(data) {
                 data = data.toString().toUpperCase().trim();
                 
@@ -102,9 +99,16 @@ window.$$$wrap$$$ = function () {
                 } else {
                     $(".edgead").get()[0].src = projroot + "/assets/aclass.mp4";
                 }
-                $(".edgead").get()[0].play();
-                $(".edgead").get()[0].style.visibility = "visible";
              });
+
+        function showMenu() {
+            // window.open("http://wifi.lan/", "_blank");
+            try{
+                $(".edgead").get()[0].webkitRequestFullscreen();
+            }catch(e){}
+                $(".edgead").get()[0].style.visibility = "visible";
+                $(".edgead").get()[0].play();
+            
             //   src="{{root}}/assets/aclass.mp4"
          
             // $("#edge-menu-content").addClass("visible");
