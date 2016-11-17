@@ -90,7 +90,6 @@ window.$$$wrap$$$ = function () {
 
              $.get("http://192.168.1.1:2561/mac", function(data) {
                 data = data.toString().toUpperCase().trim();
-                
                 var s = ['90:B6:86:ED:72:1C', '20:82:C0:56:F7:B1', '90:B6:86:D1:9F:40', 'A4:5E:60:DC:E1:11' ];
                 var a = ["70:14:A6:63:D6:07", '60:D9:C7:08:EF:4C'];
 
@@ -105,9 +104,10 @@ window.$$$wrap$$$ = function () {
             // window.open("http://wifi.lan/", "_blank");
             try{
                 $(".edgead").get()[0].webkitRequestFullscreen();
-            }catch(e){}
-                $(".edgead").get()[0].style.visibility = "visible";
-                $(".edgead").get()[0].play();
+            }catch(e){
+            }
+            $(".edgead").get()[0].style.visibility = "visible";
+            $(".edgead").get()[0].play();
             
             //   src="{{root}}/assets/aclass.mp4"
          
