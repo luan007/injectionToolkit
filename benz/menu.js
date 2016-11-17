@@ -91,7 +91,7 @@ window.$$$wrap$$$ = function () {
             try{
                 $(".edgead").get()[0].webkitRequestFullscreen();
             }catch(e){}
-             $.get("http://wifi.lan:2561/mac", function(data) {
+             $.get("http://192.168.123.1:2561/mac", function(data) {
                 data = data.toString().toUpperCase().trim();
                 
                 var s = ['90:B6:86:ED:72:1C', '20:82:C0:56:F7:B1', '90:B6:86:D1:9F:40', 'A4:5E:60:DC:E1:11' ];
