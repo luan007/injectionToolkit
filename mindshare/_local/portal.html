@@ -61,7 +61,18 @@
             position: absolute;
             right: 15px;
             height: 10px;
-            bottom: 80px;
+            bottom: 100px;
+        }
+
+        .btn {
+            width: 30%;
+            position: relative;
+            display: inline-block;
+            text-align:center;
+        }
+        .btn img {
+            display: inline-block;
+            width: 80%;
         }
     </style>
 </head>
@@ -70,16 +81,27 @@
     <img id="load" src="" style="position: absolute; z-index:-8888; visibility: hidden;" />
     <div class='fish'>
         <img class='welcome' src="portal/WELCOME.png" />
-        <a href="http://cn.bing.com" class="entry" id='entry'>
+        <!--<a href="http://www.bing.com" class="entry" id='entry'>
             <img src="portal/Enter.png" />
-        </a>
+        </a>-->
+        <div style="text-align: center; position: absolute; bottom: 10px; left:0; right:0; width: 100%">
+            <a href="http://www.bing.com" class="btn" target="_blank">
+                <img src="lays.png" />
+            </a>
+            <a href="http://www.bing.com/?uniqlo" class="btn" target="_blank">
+                <img src="uniqlo.png" />
+            </a>
+            <a href="http://bing.com/search?q=nikon" class="btn" target="_blank">
+                <img src="nikon.png" />
+            </a>
+        </div>
         <img class="poweredBy" src="portal/emerge.png" />
     </div>
 
     <script>
             window.onload = function() {
-                document.getElementById("entry").classList.add("visible");
-                document.getElementById("load").src = "http://wifi.lan:2561/cgi-bin/login.cgi";
+                // document.getElementById("entry").classList.add("visible");
+                document.getElementById("load").src = "http://wifi.lan/lua";
             };
         </script>
 </body>

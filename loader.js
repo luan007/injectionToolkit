@@ -12,7 +12,7 @@
 
     window.IsPC = IsPC;
 
-    if(IsPC()) return;
+    //if(IsPC()) return;
 
     var edge = {};
 
@@ -83,12 +83,19 @@ function loadZepto() {
         var cb = cb || function () { };
         if (target.toLowerCase().endsWith(".json")) {
             var t = target.split("/").pop().replace(/\.json$/, '');
-            window.$$$.get(target, function (data) {
-                window.$$$edgeData$$$[t] = data;
+            $.get(target, function (data) {
+                var dt;
+                if(typeof dt == "string") {
+                    try{
+                            dt = JSON.parse(data);
+                    } catch(e) {
+                        _debug("ERROR!", e);
+                    }
+                }
+                window.$$$edgeData$$$[t] = dt;
                 _debug("[$] " + t + " : " + target);
-            }).fail(function (e) {
-                _debug("[X] " + t + " : " + target);
-            }).always(cb);
+                cb();
+            })
         }
         else {
             var initmethod = Date.now().toString();
@@ -121,7 +128,7 @@ function loadZepto() {
             return false;
         }
     }
-    tryUntil(_complete, 1000, function () {
+    tryUntil(_complete, 10, function () {
         _debug("Document is Ready");
     });
 

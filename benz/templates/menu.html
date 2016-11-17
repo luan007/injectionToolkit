@@ -1,0 +1,115 @@
+<inject appendTo="body">
+
+	<style>
+		
+		#edge_menu_bar {
+			height: 70px;
+			width: 70px;
+			border-radius: 9999em;
+			position: fixed;
+			z-index: 1000000;
+			left: 0;
+			top: 0;
+			transition: 0.5s all ease;
+			transform-origin: 50% 50%;
+			transform: translate(0, 0) scale(1, 1);
+		}
+		
+		.menu-text {
+			transform-origin: 51.5% 75%;
+			opacity: 1;
+			transform: rotate(0) scale(1, 1);
+			transition: 0.5s all ease;
+		}
+		
+		#edge_menu_bar.hold {
+			background: rgba(0, 0, 0, 0);
+		}
+		
+		#edge_menu_bar.hold .menu-text {
+			transform: rotate(-20deg) scale(0, 0);
+			opacity: 0;
+		}
+	</style>
+	<div id='edge_menu_bar'>
+		<div style="background:url('{{root}}/assets/logo@2x.png'); width: 100%; height: 100%; background-position: 50% 50%; background-size: contain;'"></div>
+	</div>
+
+	<style>
+		#edge-menu-content {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 9999999;
+			background: black;
+			pointer-events: none;
+			opacity: 0;
+			transition: opacity 0.5s ease, filter 1.3s ease, -webkit-filter 1.3s ease;
+			
+			-webkit-filter: blur(50px);
+			filter: blur(50px);
+		}
+
+		#edge-menu-content.visible {
+			pointer-events: all;
+			opacity: 1;
+			-webkit-filter: blur(0px);
+			filter: blur(0px);
+			transition: opacity 0.5s 1.5s ease, filter 1.3s 2s ease, -webkit-filter 1.3s 2s ease;
+			
+		}
+		
+		.edgecross {
+			position: absolute; 
+			top: 30px;
+			right: 30px;
+			width: 40px;
+			height: 40px;
+			overflow: visible;
+		}
+
+		.edgecross:before, .edgecross:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			height: 2px;
+			width: 40px;
+			right: 0px;
+			bottom: 20px;
+			background: rgb(40,159,0);
+			transform-origin: 50% 50%;
+			transform: rotate(0deg);
+			opacity: 0;
+			transition: all 0.2s ease;
+		}
+		
+		.visible .edgecross:before {
+			transform: rotate(45deg);
+			opacity: 1;
+		}
+		.visible .edgecross:after {
+			transform: rotate(-45deg);
+			opacity: 1;
+		}
+
+		video.edgead {
+			visibility: hidden;
+			height: 0;
+			width: 0;
+			position: fixed;
+			top: 0;
+			left:0;
+		}
+
+	</style>
+	<div id="edge-menu-content">
+		<div id="outerlayer">
+			
+		</div>
+		<div id="edge-menu-close" class="edgecross"></div>
+	</div>
+
+	<video class='edgead'></video>
+</inject>

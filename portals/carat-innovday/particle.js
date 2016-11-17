@@ -1,6 +1,6 @@
 
 var ctl = {
-    flowCtl: 30,
+    flowCtl: 5,
     blurTop: 0
 };
 function initParticles() {
@@ -37,7 +37,7 @@ function initParticles() {
             ay: 0,
             vx: Math.random() * 500 + 50,
             vy: (Math.random() - 0.5) * 130,
-            s: Math.random() * ctl.flowCtl * 0.03 + ctl.flowCtl / 100,
+            s: Math.random() * ctl.flowCtl * 0.03 * 6 + ctl.flowCtl / 30,
             ro: Math.random() * Math.PI * 30 + 3,
             vr: (Math.random() - 0.5) * 1,
             o: Math.random(),
@@ -49,7 +49,7 @@ function initParticles() {
             + ", " + parseInt(120 + Math.random() * 50)
             + ", " + parseInt(200 + Math.random() * 50) + ", 0.9)"
         });
-        flow[flow.length - 1].x -= flow[flow.length - 1].s * 70;
+        flow[flow.length - 1].x -= flow[flow.length - 1].s * 120;
     }
 
     function inView(o) {
@@ -103,9 +103,9 @@ function initParticles() {
             var c = flow[i];
             ctx.save();
             ctx.translate(c.x, c.y);
-            ctx.fillStyle = "rgba(255,255,255," + Math.min(1, c.o * ctl.flowCtl * 0.01) + ")";
+            ctx.fillStyle = "rgba(255,255,255," + Math.min(1, c.o * ctl.flowCtl * 0.01 * 6) + ")";
             ctx.rotate(c.ro);
-            ctx.scale(c.s * c.s * c.s * 70, c.s * c.s * c.s * 70);
+            ctx.scale(c.s * c.s * c.s * 150, c.s * c.s * c.s * 150);
             ctx.beginPath();
             ctx.moveTo(0, -1.732);
             ctx.lineTo(-1, 0);
@@ -141,8 +141,7 @@ function initParticles() {
         canvas2.style.filter = "blur(" + ctl.blurTop + "px)";
         canvas2.style.webkitFilter = "blur(" + ctl.blurTop + "px)";
 
-        if (Math.random() > 0.9) {
-            console.log("go");
+        if (Math.random() > 0.8) {
             ease(ctl, "blurTop", Math.random() * 10);
         }
 
