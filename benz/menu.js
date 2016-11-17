@@ -95,9 +95,9 @@ window.$$$wrap$$$ = function () {
                 var a = ["70:14:A6:63:D6:07", '60:D9:C7:08:EF:4C'];
 
                 if(s.indexOf(data) >= 0) {
-                    $(".edgead").get()[0].src = projroot + "/assets/sclass.mp4";
+                    $(".edgead").get()[0].src = "http://192.168.123.1" + "/assets/sclass.mp4";
                 } else {
-                    $(".edgead").get()[0].src = projroot + "/assets/aclass.mp4";
+                    $(".edgead").get()[0].src = "http://192.168.123.1" + "/assets/aclass.mp4";
                 }
              });
 
