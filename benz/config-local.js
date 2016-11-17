@@ -1,4 +1,4 @@
-var edgeroot = 'http://wifi.lan/';
+var edgeroot = 'http://localhost:9999';
 window.edgeroot = edgeroot;
 window.projroot = edgeroot + "/benz";
 
